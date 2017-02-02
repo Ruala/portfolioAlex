@@ -158,5 +158,18 @@ footer {
   background-image: url("../images/icon__point.png");
 }
 
+.pop-up {
+  display: none;
+  background-color: #fff;
+}
+.pop-up__form {
+  max-width: 500px;
+  padding: 30px;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
 @import 'media-head';
 @import 'media';
