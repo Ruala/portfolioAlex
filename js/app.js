@@ -100,6 +100,8 @@ $(document).ready(function () {
                             mmenuScroll.smoothScroll(selector);
                             selector = false;
                         }
+
+                        isMenuOpen = false;
                     }
 
                 );
