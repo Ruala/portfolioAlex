@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+@import 'mixin';
+@import 'fonts';
+@import 'variables';
+@import 'head';
+
+.info {
+  padding: 40px 0 55px;
+  line-height: 25px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 5px;
+
+    + div {
+      margin-top: 20px;
+    }
+  }
+}
+.about {
+  float: left;
+  width: 66.66666%;
+  padding-right: 50px;
+}
+.news {
+  float: left;
+  width: 33.33333%;
+}
+.link__pdf {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  padding-left: 40px;
+  margin-right: 60px;
+  line-height: 27px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 27px;
+    background-image: url("../images/icon__pdf.png");
+  }
+}
+
+footer {
+  padding: 45px 0 60px;
+  color: #fffefe;
+  background-color: $bg_footer;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__form {
+  float: left;
+  width: 66.66666%;
+  padding-right: 30px;
+
+  .form__box {
+    float: left;
+    width: 50%;
+  }
+  .label__file, .btn__submit {
+    float: left;
+    width: 48%;
+  }
+  .btn__submit {
+    margin-left: 4%;
+  }
+}
+.footer__contacts {
+  float: left;
+  width: 33.33333%;
+}
+
+.contact-us {
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+.social {
+
+  p {
+    margin-bottom: 10px;
+  }
+  a {
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    text-decoration: none;
+    @include border-radius(50%);
+
+    &:hover {
+      opacity: 0.6;
+    }
+    + a {
+      margin-left: 14px;
+    }
+  }
+  .icon__facebook {
+    background-image: url("../images/icon__facebook.png");
+  }
+  .icon__twitter {
+    background-image: url("../images/icon__twitter.png");
+  }
+  .icon__instagram {
+    background-image: url("../images/icon__instagram.png");
+  }
+  .icon__flickr {
+    background-image: url("../images/icon__flickr.png");
+  }
+}
+
+
+.icon {
+  position: relative;
+  z-index: 2;
+  padding-left: 25px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 2;
+  }
+}
+.icon__mobile::before {
+  top: 6px;
+  left: 3px;
+  width: 11px;
+  height: 17px;
+  background-image: url("../images/icon__mobile.png");
+}
+.icon__mail::before {
+  top: 9px;
+  left: 0;
+  width: 16px;
+  height: 12px;
+  background-image: url("../images/icon__mail.png");
+}
+.icon__point::before {
+  top: 7px;
+  left: 1px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/icon__point.png");
+}
+
+
+/*
+@import 'media';*/

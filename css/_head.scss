@@ -1,0 +1,482 @@
+/* ----------------------------------------------
+ Reset
+ ---------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0 auto;
+    background-position:center;
+    background-repeat:no-repeat;
+    @include box-sizing(border-box);
+}
+
+/* ----------------------------------------------
+ Main
+ ---------------------------------------------- */
+
+html, body {
+    width: 100%;
+}
+
+body {
+    min-width: 320px;
+    font: 14px $firaSans;
+    font-weight: 400;
+    color: $textGrey;
+    background-color: #fff;
+}
+header, footer, div, nav, ul, form {
+     &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.page-wrap {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+.incontainer {
+    padding: 0 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ----------------------------------------------
+ Fonts Paragrahps
+ ---------------------------------------------- */
+
+h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 500;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: $textHeadingGrey;
+
+}
+h3  {
+    font-size: 21px;
+    font-weight: 700;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+b {
+    font-weight: 700;
+}
+
+/* ----------------------------------------------
+ Links Img
+ ---------------------------------------------- */
+
+a {
+    color: $linkColor;
+    outline: 0;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/* ----------------------------------------------
+ Form Buttons Inputs
+ ---------------------------------------------- */
+
+button, input, textarea {
+    outline: none;
+    border: none;
+    @include box-shadow(none);
+}
+button {
+    cursor: pointer;
+}
+
+.form {
+    input, textarea {
+        width: 100%;
+        color: #f9f9f9;
+        background-color: $bg_footer;
+        border: 1px solid #747474;
+    }
+    input {
+        height: 40px;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    textarea {
+        height: 100px;
+        padding: 10px 15px;
+    }
+    .reverse {
+        color: $bg_footer;
+        background-color: #f9f9f9;
+        border-color: #9f9f9f;
+    }
+    .label__file {
+        display: block;
+        position: relative;
+        z-index: 2;
+        width: 167px;
+        height: 40px;
+        padding-left: 35px;
+        color: #f9f9f9;
+        line-height: 38px;
+        background-color: $bg_footer;
+        border: 1px solid #747474;
+        cursor: pointer;
+
+        .icon__addfile {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 10px;
+            left: 13px;
+            width: 15px;
+            height: 17px;
+            background-image: url("../images/icon__addfile.png");
+        }
+    }
+}
+
+.btn__callback {
+    position: relative;
+    z-index: 2;
+    width: 88px;
+    height: 64px;
+    padding: 30px 15px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ededee;
+    background-color: $main_red;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 30px;
+        width: 23px;
+        height: 23px;
+        background-image: url("../images/icon__phone.png");
+    }
+}
+.btn__more {
+    display: block;
+    width: 127px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: $textHeadingGrey;
+    background-color: transparent;
+    border: 2px solid $textHeadingGrey;
+
+    span {
+        border-bottom: 1px dashed $textHeadingGrey;
+        @include transition(all 0.2s ease-in-out);
+    }
+
+    &:hover {
+        span {
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.btn__submit {
+    width: 167px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #f9f9f9;
+    background-color: $btn_red;
+}
+
+/* ---------------------------------------------- /*
+ Transition elsements
+/* ---------------------------------------------- */
+
+a, button, .btn {
+    @include transition(all 0.2s ease-in-out);
+}
+
+/* ----------------------------------------------
+ Header
+ ---------------------------------------------- */
+
+header {
+    height: 64px;
+    padding: 14px 0 13px;
+    @include linearGradient(#f6f6f7, #dedee0);
+}
+
+.logo {
+    float: left;
+    width: 165px;
+    height: 37px;
+
+    a {
+        display: block;
+    }
+}
+.header__menu {
+    float: left;
+    margin: 0 200px;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 37px;
+
+    li {
+        float: left;
+
+        + li {
+            margin-left: 45px;
+        }
+    }
+    a {
+        color: $textHeadingGrey;
+    }
+}
+.header__contacts {
+    float: right;
+    width: 255px;
+
+    .btn__callback {
+        margin-top: -14px;
+    }
+}
+.header__phone {
+    float: right;
+    margin-left: 15px;
+    font-size: 21px;
+    font-weight: 500;
+    color: $textHeadingGrey;
+    line-height: 37px;
+}
+
+/* ----------------------------------------------
+ Nav
+ ---------------------------------------------- */
+#m-menu:not( .mm-menu ) {
+    display: none;
+}
+#m-menu-btn-wrapper {
+    padding: 0;
+    background-color: #fff;
+    width: 70px;
+    visibility: hidden;
+    //display: none;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+}
+#mm-blocker {
+    z-index: 1200;
+    cursor: pointer;
+}
+.menu-button {
+    cursor: pointer;
+    padding: 0;
+}
+.hamburger {
+    padding: 13px 15px;
+    background-color: #fff;
+    width: 70px;
+    margin: 0;
+}
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    position: relative; }
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #4e4e4e;
+    border-radius: 4px;
+    position: absolute;
+}
+.hamburger-inner {
+    &::before, &::after {
+        content: "";
+        display: block; }
+    &::before {
+        top: -10px; }
+    &::after {
+        bottom: -10px; }
+}
+
+.hamburger--collapse {
+    .hamburger-inner {
+        top: auto;
+        bottom: 0;
+        @include transition(transform 0.15s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19));
+        &::after {
+            top: -20px;
+            @include transition(top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear);
+        }
+        &::before {
+            @include transition(top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19));
+        }
+    }
+}
+
+html.mm-opening .hamburger--collapse .hamburger-inner {
+    @include transform(translate3d(0, -10px, 0) rotate(-45deg));
+    @include transition(transform 0.15s 0.32s cubic-bezier(0.215, 0.61, 0.355, 1));
+}
+html.mm-opening .hamburger--collapse .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    @include transition(top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.27s linear)
+}
+html.mm-opening .hamburger--collapse .hamburger-inner::before {
+    top: 0;
+    @include transform(rotate(-90deg));
+    @include transition(top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1));
+}
+
+
+/* ----------------------------------------------
+ Content
+ ---------------------------------------------- */
+
+.page-header {
+    position: relative;
+    z-index: 2;
+    min-height: 393px;
+    padding: 55px 0;
+    color: #fff;
+    background-image: url("../images/bg_pageheader.jpg");
+    background-size: cover;
+
+    .container {
+        position: relative;
+        z-index: 5;
+    }
+}
+.overlay__bg {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-header__content {
+    float: left;
+    max-width: 770px;
+    font-size: 16px;
+
+    h1 {
+        margin-bottom: 30px;
+
+        span {
+            padding: 5px 10px;
+            background-color: $main_red;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+        line-height: 25px;
+    }
+}
+.page-header__block {
+    float: right;
+    width: 255px;
+    height: 259px;
+    padding: 15px;
+    background-color: rgba(251, 21, 26, 0.57);
+
+    h4 {
+        margin-bottom: 25px;
+    }
+}
+.page-header__list {
+    padding-left: 15px;
+
+    li {
+        margin-bottom: 20px;
+        list-style: square;
+    }
+}
+
+.examples {
+    padding: 35px 0;
+    background-image: url("../images/examples_bg.png");
+    background-repeat: repeat;
+    border-bottom: 1px solid #ececec;
+
+    h2 {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+}
+.examples__box {
+    float: left;
+    width: 33.33333%;
+    margin-bottom: 50px;
+
+    img {
+        @include  transition(all 0.4s ease);
+    }
+
+    &:hover img {
+        @include transform(scale(1.15));
+    }
+}
+.link__image {
+    display: block;
+    width: 370px;
+    height: 220px;
+    overflow: hidden;
+}
+.examples__text {
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 15px 10px 15px 80px;
+    font-size: 16px;
+    background-color: #eaeaea;
+
+    .data {
+        position: absolute;
+        z-index: 2;
+        top: 15px;
+        left: 10px;
+        padding: 3px;
+        font-size: 12px;
+        color: #fff;
+        background-color: $main_red;
+    }
+    .title {
+        padding-left: 8px;
+        border-left: 1px solid #ccc;
+
+        a {
+            color: #3a4a4b;
+            text-decoration: none;
+        }
+    }
+}
