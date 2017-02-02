@@ -34,7 +34,6 @@
   position: relative;
   z-index: 2;
   padding-left: 40px;
-  margin-right: 60px;
   line-height: 27px;
 
   &::before {
@@ -47,6 +46,10 @@
     width: 28px;
     height: 27px;
     background-image: url("../images/icon__pdf.png");
+  }
+
+  + .link__pdf {
+    margin-left: 60px;
   }
 }
 
@@ -155,6 +158,5 @@ footer {
   background-image: url("../images/icon__point.png");
 }
 
-
-/*
-@import 'media';*/
+@import 'media-head';
+@import 'media';
