@@ -467,6 +467,10 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     .info p + div {
       margin-top: 20px; }
 
+.hidden-examples {
+  display: none;
+  float: left; }
+
 .about {
   float: left;
   width: 66.66666%;

@@ -132,6 +132,13 @@ $(document).ready(function () {
 
     /*show more jobs*/
     (function () {
+        $slideDown = $('[data-role="slideDown"]');
 
+        $slideDown.on('click', function () {
+            var targetSelector = $(this).attr('data-target');
+
+            $(this).fadeOut();
+            $(targetSelector).slideDown();
+        });
     })();
 });
