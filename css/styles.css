@@ -631,6 +631,13 @@ footer {
     -o-transform: rotate(45deg);
     transform: rotate(45deg); }
 
+/*form validation*/
+.form-success {
+  border-color: green !important; }
+
+.form-fail {
+  border-color: #c60509 !important; }
+
 /* Medium devices */
 @media (max-width: 1199px) {
   .page-header__content {
