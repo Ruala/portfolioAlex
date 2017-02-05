@@ -175,5 +175,39 @@ footer {
   }
 }
 
+/*Scroll up button*/
+#scrollUp {
+  position: fixed;
+  width: 44px;
+  height: 36px;
+  background-color: $btn_red;
+  @include border-radius(5px);
+  right: 10px;
+  bottom: -40px;
+  display: none;
+  @include transition(opacity 0.2s ease-in-out);
+  cursor: pointer;
+  z-index: 20;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    //background: transparent;
+  }
+  .upButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -4px;
+    opacity: 1;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    @include transform(rotate(45deg));
+  }
+}
+
 @import 'media-head';
 @import 'media';

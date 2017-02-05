@@ -61,7 +61,7 @@
                 </nav><!-- mobile menu -->
 
                 <div class="header__contacts">
-                    <button class="btn__callback">Обратный звонок</button>
+                    <a href="#call-back" class="btn__callback" data-role="lightbox">Обратный звонок</a>
                     <div class="header__phone">(495) 256-04-10</div>
                 </div>
 
@@ -320,11 +320,11 @@
 
                 <div class="form__box">
                     <div class="incontainer">
-                        <input type="text" name="phone" placeholder="Телефон">
-                        <input class="reverse" type="text" name="email" placeholder="Электронная почта">
+                        <input type="text" name="phone" placeholder="Телефон" required>
+                        <input class="reverse" type="text" name="email" placeholder="Электронная почта" required>
                         <label for="file_1" class="label__file"><span class="icon__addfile"></span>Прикрепить файл</label>
                         <input id="file_1" class="hidden" type="file" name="file">
-                        <button class="btn__submit" type="submit">Рассчитать</button>
+                        <input class="btn__submit" type="submit">Рассчитать</input>
                     </div>
                 </div>
 
@@ -355,15 +355,14 @@
 
 <!--pop-up-->
 
-    <div class="pop-up pop-up__call-back">
+    <div id="call-back" class="pop-up pop-up__call-back">
         <form action="/" class="form pop-up__form" method="post">
             <h2>Обратный звонок</h2>
 
             <input class="reverse" type="text" name="name" placeholder="Имя">
-            <input class="reverse" type="text" name="phone" placeholder="Телефон">
-            <input class="reverse" type="text" name="email" placeholder="Электронная почта">
-
-            <button class="btn__submit" type="submit">Отправить</button>
+            <input class="reverse" type="text" name="phone" placeholder="Телефон" required>
+            <input class="reverse" type="text" name="email" placeholder="Электронная почта" required>
+            <input class="btn__submit" type="submit" value="Отправить">
 
         </form>
     </div>
