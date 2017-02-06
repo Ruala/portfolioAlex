@@ -164,6 +164,7 @@ button {
 }
 
 .btn__callback {
+    display: inline-block;
     position: relative;
     z-index: 2;
     width: 88px;
@@ -172,6 +173,8 @@ button {
     font-size: 12px;
     font-weight: 500;
     color: #ededee;
+    text-align: center;
+    text-decoration: none;
     background-color: $main_red;
 
     &::before {
@@ -207,13 +210,18 @@ button {
     }
 }
 
-.btn__submit {
+form .btn__submit {
+    display: block;
     width: 167px;
     height: 40px;
+    padding: 0;
+    margin: 0 auto;
     font-size: 16px;
     font-weight: 500;
     color: #f9f9f9;
     background-color: $btn_red;
+    border: none;
+    cursor: pointer;
 }
 
 /* ---------------------------------------------- /*
@@ -445,9 +453,18 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     img {
         @include  transition(all 0.4s ease);
     }
+    .examples__content {
+        border: 5px solid transparent;
+        @include  transition(all 0.4s ease);
+    }
 
-    &:hover img {
-        @include transform(scale(1.15));
+    &:hover {
+        img {
+            @include transform(scale(1.15));
+        }
+        .examples__content {
+            border-color: #9ba0a1;
+    }
     }
 }
 .link__image {
@@ -480,6 +497,9 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
         a {
             color: #3a4a4b;
             text-decoration: none;
+        }
+        &:hover a {
+            text-decoration: underline;
         }
     }
 }
