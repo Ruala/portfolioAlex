@@ -273,12 +273,18 @@ header {
   visibility: hidden;
   position: fixed;
   top: 7px;
-  left: 0;
+  right: 0;
   z-index: 50; }
 
 #mm-blocker {
   z-index: 1200;
   cursor: pointer; }
+
+html.mm-front .mm-menu.mm-offcanvas {
+  z-index: 30; }
+
+.mm-panels > .mm-panel.mm-hasnavbar {
+  padding-top: 60px; }
 
 .menu-button {
   cursor: pointer;
@@ -706,13 +712,14 @@ footer {
     display: none; }
 
   .header__contacts {
-    width: auto; }
+    width: auto;
+    float: left; }
 
   .btn__callback {
     position: absolute;
     z-index: 2;
     top: 0;
-    right: 0;
+    left: 0;
     width: 70px;
     padding: 30px 0 10px; }
     .btn__callback::before {

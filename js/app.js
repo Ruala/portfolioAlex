@@ -373,7 +373,15 @@ $(document).ready(function () {
                 var isMenuOpen = false;
 
                 $menu.mmenu({
-                    "extensions": ["theme-dark"]
+                    "extensions": ["theme-dark"],
+                    offCanvas: {
+                        moveBackground: false,
+                        position: "top",
+                        zposition: "front"
+                    },
+                    navbar: {
+                        title: false //'Меню'
+                    }
                 });
 
                 var selector = false;
