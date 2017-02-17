@@ -209,6 +209,39 @@ button {
         }
     }
 }
+.btn__close {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    cursor: pointer;
+
+
+    &::after, &::before {
+        width: 10px;
+        height: 10px;
+        content: '';
+        display: block;
+        position: absolute;
+        border-top: 3px solid #9f9f9f; //$bg_footer
+        border-right: 3px solid #9f9f9f;
+    }
+    &::after {
+        @include transform(rotate(45deg));
+    }
+    &::before {
+        left: 14px;
+        @include transform(rotate(225deg));
+    }
+
+    &:hover {
+        &::after, &::before {
+            border-color: $bg_footer;
+        }
+    }
+}
 
 form .btn__submit {
     display: block;
@@ -301,6 +334,16 @@ header {
     right: 0;
     z-index: 50;
 }
+.mm-navbar{
+    height: 64px;
+
+    & > * {
+        padding: 22px 0;
+    }
+}
+.mm-title {
+    font-size: 20px;
+}
 #mm-blocker {
     z-index: 1200;
     cursor: pointer;
@@ -309,7 +352,7 @@ html.mm-front .mm-menu.mm-offcanvas {
     z-index: 30;
 }
 .mm-panels>.mm-panel.mm-hasnavbar {
-    padding-top: 60px;
+    padding-top: 84px;
 }
 .menu-button {
     cursor: pointer;

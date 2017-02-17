@@ -380,7 +380,7 @@ $(document).ready(function () {
                         zposition: "front"
                     },
                     navbar: {
-                        title: false //'Меню'
+                        title: 'Меню' //'Меню'
                     }
                 });
 
@@ -439,7 +439,10 @@ $(document).ready(function () {
 
         $simpleLightbox.fancybox({
             padding   : 0,
-            margin    : 0
+            margin    : 0,
+            tpl: {
+                closeBtn : '<span class="btn__close"></span>'
+            }
         });
     })();
 
