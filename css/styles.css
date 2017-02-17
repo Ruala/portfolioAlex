@@ -731,6 +731,9 @@ footer {
     min-height: 100vh;
     padding: 120px 0 20px;
   }*/
+  .page-header {
+    padding-top: 119px; }
+
   .page-header__block {
     display: none; }
 
