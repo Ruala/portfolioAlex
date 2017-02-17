@@ -56,12 +56,13 @@
   }
   .header__contacts {
     width: auto;
+    float: left;
   }
   .btn__callback {
     position: absolute;
     z-index: 2;
     top: 0;
-    right: 0;
+    left: 0;
     width: 70px;
     padding: 30px 0 10px;
 
