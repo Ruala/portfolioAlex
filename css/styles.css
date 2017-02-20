@@ -472,7 +472,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   background-color: rgba(251, 21, 26, 0.57);
   position: absolute;
   right: 15px;
-  top: 0; }
+  top: -5px; }
   .page-header__block h4 {
     margin-bottom: 25px; }
 
