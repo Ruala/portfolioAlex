@@ -123,16 +123,24 @@ button {
         height: 40px;
         padding: 0 15px;
         margin-bottom: 20px;
+
+      &:focus {
+        color: $bg_footer;
+        background-color: #f9f9f9;
+        border-color: #9f9f9f;
+      }
     }
     textarea {
         height: 100px;
         padding: 10px 15px;
-    }
-    .reverse {
+
+      &:focus {
         color: $bg_footer;
         background-color: #f9f9f9;
         border-color: #9f9f9f;
+      }
     }
+
     .label__file {
         display: block;
         position: relative;
@@ -284,10 +292,16 @@ header {
         display: block;
     }
 }
+
+.header__menu__wrap {
+  padding: 0 270px 0 180px;
+  text-align: center;
+}
 .header__menu {
-    float: left;
-    margin: 0 0 0 200px;
-    font-size: 16px;
+    display: inline-block;
+    /*float: left;*/
+    margin: 0 auto;
+    /*font-size: 16px;*/
     text-transform: uppercase;
     line-height: 37px;
 
@@ -295,7 +309,7 @@ header {
         float: left;
 
         + li {
-            margin-left: 45px;
+            margin-left: 20px;
         }
     }
     a {
@@ -303,7 +317,10 @@ header {
     }
 }
 .header__contacts {
-    float: right;
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 15px;
     width: 255px;
 
     .btn__callback {
@@ -341,8 +358,21 @@ header {
         padding: 22px 0;
     }
 }
+.mm-listview {
+  line-height: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+
+    > li {
+        >a, >span {
+            padding: 20px 10px 20px 20px;
+        }
+    }
+}
 .mm-title {
-    font-size: 20px;
+    line-height: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
 }
 #mm-blocker {
     z-index: 1200;
@@ -493,14 +523,14 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     border-bottom: 1px solid #ececec;
 
     h2 {
-        margin-bottom: 35px;
+        margin-bottom: 20px;
         text-align: center;
     }
 }
 .examples__box {
     float: left;
     width: 33.33333%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     img {
         @include  transition(all 0.4s ease);

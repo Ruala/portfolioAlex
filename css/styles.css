@@ -108,13 +108,17 @@ button {
   height: 40px;
   padding: 0 15px;
   margin-bottom: 20px; }
+  .form input:focus {
+    color: #4d4d4d;
+    background-color: #f9f9f9;
+    border-color: #9f9f9f; }
 .form textarea {
   height: 100px;
   padding: 10px 15px; }
-.form .reverse {
-  color: #4d4d4d;
-  background-color: #f9f9f9;
-  border-color: #9f9f9f; }
+  .form textarea:focus {
+    color: #4d4d4d;
+    background-color: #f9f9f9;
+    border-color: #9f9f9f; }
 .form .label__file {
   display: block;
   position: relative;
@@ -266,21 +270,29 @@ header {
   .logo a {
     display: block; }
 
+.header__menu__wrap {
+  padding: 0 270px 0 180px;
+  text-align: center; }
+
 .header__menu {
-  float: left;
-  margin: 0 0 0 200px;
-  font-size: 16px;
+  display: inline-block;
+  /*float: left;*/
+  margin: 0 auto;
+  /*font-size: 16px;*/
   text-transform: uppercase;
   line-height: 37px; }
   .header__menu li {
     float: left; }
     .header__menu li + li {
-      margin-left: 45px; }
+      margin-left: 20px; }
   .header__menu a {
     color: #303030; }
 
 .header__contacts {
-  float: right;
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 15px;
   width: 255px; }
   .header__contacts .btn__callback {
     margin-top: -14px; }
@@ -313,8 +325,17 @@ header {
   .mm-navbar > * {
     padding: 22px 0; }
 
+.mm-listview {
+  line-height: 20px;
+  font-size: 18px;
+  text-transform: uppercase; }
+  .mm-listview > li > a, .mm-listview > li > span {
+    padding: 20px 10px 20px 20px; }
+
 .mm-title {
-  font-size: 20px; }
+  line-height: 20px;
+  font-size: 18px;
+  text-transform: uppercase; }
 
 #mm-blocker {
   z-index: 1200;
@@ -467,13 +488,13 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   background-repeat: repeat;
   border-bottom: 1px solid #ececec; }
   .examples h2 {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     text-align: center; }
 
 .examples__box {
   float: left;
   width: 33.33333%;
-  margin-bottom: 50px; }
+  margin-bottom: 30px; }
   .examples__box img {
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -706,36 +727,41 @@ footer {
   border-color: #c60509 !important; }
 
 /* Medium devices */
-@media (max-width: 1199px) {
-  /*.page-header__content {
-    max-width: 650px;
-  }*/ }
 /* Small devices */
 @media (max-width: 991px) {
   .container {
     max-width: 750px; }
 
-  /* header {
-     position: absolute;
-     z-index: 3;
-     top: 0;
-     left: 0;
-     width: 100%;
-   }*/
-  .header__menu {
-    margin-left: 40px; }
+  .header__menu__wrap {
+    display: none; }
 
-  .header__content {
-    max-width: 100%; }
+  #m-menu-btn-wrapper {
+    visibility: visible; }
 
-  /*.page-header {
-    height: 100%;
-    min-height: 100vh;
-    padding: 120px 0 20px;
-  }*/
-  /*.page-header {
-    padding-top: 119px;
-  }*/
+  .logo {
+    float: none; }
+
+  .header__phone {
+    display: none; }
+
+  .header__contacts {
+    width: auto;
+    left: 0;
+    right: auto; }
+
+  .btn__callback {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 70px;
+    padding: 30px 0 10px; }
+    .btn__callback::before {
+      left: 25px; }
+
+  /*  .header__contacts .btn__callback {
+      margin-top: 0;
+    }*/
   .page-header__block {
     display: none; }
 
@@ -751,35 +777,37 @@ footer {
   h1 {
     font-size: 40px; }
 
-  .header__menu {
-    display: none; }
-
-  #m-menu-btn-wrapper {
-    visibility: visible; }
-
+  /* .header__menu {
+     display: none;
+   }
+   #m-menu-btn-wrapper {
+     visibility: visible;
+   }
   .logo {
-    float: none; }
-
+    float: none;
+  }
   .header__phone {
-    display: none; }
-
+    display: none;
+  }
   .header__contacts {
     width: auto;
-    float: left; }
-
+    float: left;
+  }
   .btn__callback {
     position: absolute;
     z-index: 2;
     top: 0;
     left: 0;
     width: 70px;
-    padding: 30px 0 10px; }
-    .btn__callback::before {
-      left: 25px; }
+    padding: 30px 0 10px;
 
+    &::before {
+      left: 25px;
+    }
+  }
   .header__contacts .btn__callback {
-    margin-top: 0; }
-
+    margin-top: 0;
+  }*/
   .examples__box {
     float: none;
     width: 100%;
