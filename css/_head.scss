@@ -446,8 +446,9 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 }
 
 .page-header__content {
-    float: left;
-    max-width: 770px;
+    /*float: left;
+    max-width: 770px;*/
+    padding-right: 330px;
     font-size: 16px;
 
     h1 {
@@ -464,11 +465,13 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     }
 }
 .page-header__block {
-    float: right;
     width: 255px;
     height: 259px;
     padding: 15px;
     background-color: rgba(251, 21, 26, 0.57);
+    position: absolute;
+    right: 15px;
+    top: 0;
 
     h4 {
         margin-bottom: 25px;
