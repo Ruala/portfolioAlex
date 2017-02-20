@@ -321,7 +321,7 @@ header {
 /* ----------------------------------------------
  Nav
  ---------------------------------------------- */
-#m-menu:not( .mm-menu ) {
+#m-menu:not(.mm-menu), .mm-menu.mm-offcanvas {
     display: none;
 }
 #m-menu-btn-wrapper {
