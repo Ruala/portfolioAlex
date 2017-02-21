@@ -38,6 +38,8 @@ header, footer, div, nav, ul, form {
     max-width: 1400px;
 }
 .container {
+    position: relative;
+    z-index: 2;
     width: 100%;
     max-width: 1200px;
 }
@@ -124,7 +126,7 @@ button {
         padding: 0 15px;
         margin-bottom: 20px;
 
-      &:focus {
+      &:focus, &.reverse {
         color: $bg_footer;
         background-color: #f9f9f9;
         border-color: #9f9f9f;
@@ -284,7 +286,9 @@ header {
 }
 
 .logo {
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 15px;
     width: 165px;
     height: 37px;
 
@@ -294,23 +298,22 @@ header {
 }
 
 .header__menu__wrap {
-  padding: 0 270px 0 180px;
-  text-align: center;
+    display: table;
+    position: relative;
+    width: 100%;
+    padding: 0 270px 0 180px;
+    text-align: center;
 }
 .header__menu {
-    display: inline-block;
-    /*float: left;*/
+    display: table-row;
     margin: 0 auto;
-    /*font-size: 16px;*/
     text-transform: uppercase;
     line-height: 37px;
+    text-align: center;
 
     li {
-        float: left;
-
-        + li {
-            margin-left: 20px;
-        }
+        display: table-cell;
+        vertical-align: middle;
     }
     a {
         color: $textHeadingGrey;
@@ -319,7 +322,7 @@ header {
 .header__contacts {
     position: absolute;
     z-index: 2;
-    top: 14px;
+    top: 0;
     right: 15px;
     width: 255px;
 

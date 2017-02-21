@@ -9,6 +9,9 @@
   .container {
     max-width: 750px;
   }
+  header .container {
+    position: static;
+  }
   .header__menu__wrap {
     display: none;
   }
@@ -16,7 +19,7 @@
     visibility: visible;
   }
   .logo {
-    float: none;
+    position: static;
   }
   .header__phone {
     display: none;
@@ -29,7 +32,7 @@
   .btn__callback {
     position: absolute;
     z-index: 2;
-    top: 0;
+    top: 14px;
     left: 0;
     width: 70px;
     padding: 30px 0 10px;

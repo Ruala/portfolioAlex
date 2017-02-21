@@ -35,6 +35,8 @@ header::after, footer::after, div::after, nav::after, ul::after, form::after {
   max-width: 1400px; }
 
 .container {
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 1200px; }
 
@@ -106,7 +108,7 @@ button {
   height: 40px;
   padding: 0 15px;
   margin-bottom: 20px; }
-  .form input:focus {
+  .form input:focus, .form input.reverse {
     color: #4d4d4d;
     background-color: #f9f9f9;
     border-color: #9f9f9f; }
@@ -258,38 +260,41 @@ header {
   /* IE10+ */
   background: linear-gradient(to bottom, #f6f6f7 0%, #dedee0 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f7', endColorstr='#dedee0',GradientType=0 );
   /* IE6-9 */ }
 
 .logo {
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 15px;
   width: 165px;
   height: 37px; }
   .logo a {
     display: block; }
 
 .header__menu__wrap {
+  display: table;
+  position: relative;
+  width: 100%;
   padding: 0 270px 0 180px;
   text-align: center; }
 
 .header__menu {
-  display: inline-block;
-  /*float: left;*/
+  display: table-row;
   margin: 0 auto;
-  /*font-size: 16px;*/
   text-transform: uppercase;
-  line-height: 37px; }
+  line-height: 37px;
+  text-align: center; }
   .header__menu li {
-    float: left; }
-    .header__menu li + li {
-      margin-left: 20px; }
+    display: table-cell;
+    vertical-align: middle; }
   .header__menu a {
     color: #303030; }
 
 .header__contacts {
   position: absolute;
   z-index: 2;
-  top: 14px;
+  top: 0;
   right: 15px;
   width: 255px; }
   .header__contacts .btn__callback {
@@ -549,6 +554,9 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .container {
     max-width: 750px; }
 
+  header .container {
+    position: static; }
+
   .header__menu__wrap {
     display: none; }
 
@@ -556,7 +564,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     visibility: visible; }
 
   .logo {
-    float: none; }
+    position: static; }
 
   .header__phone {
     display: none; }
@@ -569,7 +577,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .btn__callback {
     position: absolute;
     z-index: 2;
-    top: 0;
+    top: 14px;
     left: 0;
     width: 70px;
     padding: 30px 0 10px; }
