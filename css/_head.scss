@@ -35,6 +35,7 @@ header, footer, div, nav, ul, form {
     position: relative;
     z-index: 2;
     width: 100%;
+   /* max-width: 1400px;*/
 }
 .container {
     position: relative;
@@ -536,8 +537,6 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 
 .examples {
     padding: 35px 0;
-    background-image: url("../images/examples_bg.png");
-    background-repeat: repeat;
     border-bottom: 1px solid #ececec;
 
     h2 {
@@ -605,7 +604,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 }
 
 
-.development-cost, .work-process, .question, .control-systems, .content__block {
+.development-cost, .work-process, .question, .control-systems, .card-info, .preview, .privilege, .content__block {
     padding: 40px 0;
 }
 
@@ -706,12 +705,128 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     }
 }
 
+.card-info {
+    h1 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+.card-info__content {
+    padding: 20px;
+    line-height: 21px;
+    border-left: 9px solid $main_red;
+
+    a {
+        color: #00b7f4;
+    }
+    > div {
+        margin-bottom: 10px;
+    }
+    .title {
+        float: left;
+        width: 175px;
+        color: #717171;
+    }
+    .description {
+        padding-left: 185px;
+    }
+}
+
+.preview {
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+.preview__image {
+    max-width: 923px;
+    margin-bottom: 40px;
+    @include border-radius(3px);
+    @include box-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.privilege {
+    font-size: 16px;
+    line-height: 25px;
+
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+.privilege__content p {
+    margin-bottom: 20px;
+}
+.trust {
+    float: left;
+    width: 40%;
+    padding: 10px 80px 0 15px;
+
+    .icon__check {
+        position: relative;
+        z-index: 2;
+        min-height: 42px;
+        padding-left: 75px;
+        margin-bottom: 45px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 40px;
+            height: 42px;
+            margin-top: -21px;
+            background-image: url("../images/icon__check-mark.png");
+        }
+
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+            height: 42px;
+        }
+    }
+}
+.results {
+    float: left;
+    width: 60%;
+
+    > div {
+        min-height: 200px;
+        padding: 30px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        border: 3px solid #a4a4a4;
+    }
+    .accent {
+        border-color: #f91017;
+    }
+}
+
+.view-more__links {
+    color: #00b7f4;
+
+    a {
+        color: #00b7f4;
+    }
+    span {
+        margin: 0 10px;
+    }
+}
 
 
 
 
 .bg__grey {
     background-color: rgba(234, 234, 234, 0.5);
+}
+.bg__dark-grey {
+    background-color: #ebebeb;
 }
 .overlay__bg {
     position: absolute;
@@ -725,4 +840,8 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 .bg__blue-glass {
     background-image: url("../images/bg_blue-glass.png");
     background-size: cover;
+}
+.bg__grey-tile {
+    background-image: url("../images/examples_bg.png");
+    background-repeat: repeat;
 }
