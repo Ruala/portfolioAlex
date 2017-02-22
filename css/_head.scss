@@ -140,7 +140,7 @@ textarea {
     input {
         margin-bottom: 20px;
 
-      &:focus, &.reverse {
+      &:focus:not([type="submit"]), &.reverse {
         color: $bg_footer;
         background-color: #f9f9f9;
         border-color: #9f9f9f;

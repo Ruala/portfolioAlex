@@ -120,7 +120,7 @@ textarea {
   border: 1px solid #747474; }
 .form input {
   margin-bottom: 20px; }
-  .form input:focus, .form input.reverse {
+  .form input:focus:not([type="submit"]), .form input.reverse {
     color: #4d4d4d;
     background-color: #f9f9f9;
     border-color: #9f9f9f; }
