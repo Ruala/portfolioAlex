@@ -588,7 +588,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   margin-bottom: 30px; }
 
 .development__box {
-  height: 224px;
+  /*  height: 224px;*/
   padding: 6px;
   background-color: #ffffff;
   -moz-box-shadow: 0 0 8px rgba(1, 0, 0, 0.02);
@@ -597,8 +597,8 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .development__box:hover > div {
     border-color: #fb151a; }
   .development__box > div {
-    height: 212px;
-    overflow: hidden;
+    /*height: 212px;
+    overflow: hidden;*/
     padding: 30px 20px;
     border: 2px solid #f1f1f1;
     -webkit-transition: all 0.2s ease-in-out;
@@ -706,7 +706,12 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     padding-right: 0; }
 
   .examples__box {
-    width: 50%; } }
+    width: 50%; }
+
+  .order-site h1 {
+    font-size: 36px; }
+  .order-site p {
+    line-height: 20px; } }
 /* Extra small devices */
 @media (max-width: 767px) {
   h1 {
@@ -715,7 +720,22 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .examples__box {
     float: none;
     width: 100%;
-    max-width: 480px; } }
+    max-width: 480px; }
+
+  .order-site {
+    font-size: 14px; }
+    .order-site h1 {
+      font-size: 30px; }
+    .order-site .btn {
+      margin-top: 15px; }
+
+  .development__box a {
+    font-size: 18px; }
+
+  .tab1 thead {
+    font-size: 14px; }
+  .tab1 td {
+    padding: 10px; } }
 @media (max-width: 599px) {
   h1 {
     font-size: 28px;
@@ -729,6 +749,32 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
         padding: 0; }
     .page-header__content p {
       margin-bottom: 15px;
-      line-height: 20px; } }
+      line-height: 20px; }
+
+  .order-site {
+    height: auto; }
+
+  .development__content > div {
+    width: 100%; }
+
+  .work-process {
+    display: none; }
+
+  .question__form .form__box > div {
+    width: 100%;
+    margin-bottom: 20px; }
+
+  .differences, .systems {
+    width: 100%; }
+
+  .systems > div {
+    width: 50%; }
+    .systems > div > a {
+      display: block; }
+  .systems .image__box {
+    display: inline-block; }
+
+  .two-column > div {
+    width: 100%; } }
 
 /*# sourceMappingURL=critical.css.map */
