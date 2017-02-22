@@ -31,7 +31,8 @@ header::after, footer::after, div::after, nav::after, ul::after, form::after {
 .page-wrap {
   position: relative;
   z-index: 2;
-  width: 100%; }
+  width: 100%;
+  /* max-width: 1400px;*/ }
 
 .container {
   position: relative;
@@ -499,8 +500,6 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 
 .examples {
   padding: 35px 0;
-  background-image: url("../images/examples_bg.png");
-  background-repeat: repeat;
   border-bottom: 1px solid #ececec; }
   .examples h2 {
     margin-bottom: 20px;
@@ -560,7 +559,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     .examples__text .title:hover a {
       text-decoration: underline; }
 
-.development-cost, .work-process, .question, .control-systems, .content__block {
+.development-cost, .work-process, .question, .control-systems, .card-info, .preview, .privilege, .content__block {
   padding: 40px 0; }
 
 .order-site {
@@ -644,8 +643,100 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     width: 50%;
     padding: 0 15px; }
 
+.card-info h1 {
+  margin-bottom: 20px;
+  text-align: center; }
+
+.card-info__content {
+  padding: 20px;
+  line-height: 21px;
+  border-left: 9px solid #fb151a; }
+  .card-info__content a {
+    color: #00b7f4; }
+  .card-info__content > div {
+    margin-bottom: 10px; }
+  .card-info__content .title {
+    float: left;
+    width: 175px;
+    color: #717171; }
+  .card-info__content .description {
+    padding-left: 185px; }
+
+.preview h2 {
+  margin-bottom: 20px;
+  text-align: center; }
+
+.preview__image {
+  max-width: 923px;
+  margin-bottom: 40px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); }
+  .preview__image:last-of-type {
+    margin-bottom: 0; }
+
+.privilege {
+  font-size: 16px;
+  line-height: 25px; }
+  .privilege h2 {
+    margin-bottom: 20px;
+    text-align: center; }
+
+.privilege__content p {
+  margin-bottom: 20px; }
+
+.trust {
+  float: left;
+  width: 40%;
+  padding: 10px 80px 0 15px; }
+  .trust .icon__check {
+    position: relative;
+    z-index: 2;
+    min-height: 42px;
+    padding-left: 75px;
+    margin-bottom: 45px; }
+    .trust .icon__check::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 40px;
+      height: 42px;
+      margin-top: -21px;
+      background-image: url("../images/icon__check-mark.png"); }
+    .trust .icon__check > div {
+      display: table-cell;
+      vertical-align: middle;
+      height: 42px; }
+
+.results {
+  float: left;
+  width: 60%; }
+  .results > div {
+    min-height: 200px;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border: 3px solid #a4a4a4; }
+  .results .accent {
+    border-color: #f91017; }
+
+.view-more__links {
+  color: #00b7f4; }
+  .view-more__links a {
+    color: #00b7f4; }
+  .view-more__links span {
+    margin: 0 10px; }
+
 .bg__grey {
   background-color: rgba(234, 234, 234, 0.5); }
+
+.bg__dark-grey {
+  background-color: #ebebeb; }
 
 .overlay__bg {
   position: absolute;
@@ -659,6 +750,10 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 .bg__blue-glass {
   background-image: url("../images/bg_blue-glass.png");
   background-size: cover; }
+
+.bg__grey-tile {
+  background-image: url("../images/examples_bg.png");
+  background-repeat: repeat; }
 
 /* Medium devices */
 /* Small devices */
@@ -710,7 +805,12 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .order-site h1 {
     font-size: 36px; }
   .order-site p {
-    line-height: 20px; } }
+    line-height: 20px; }
+
+  .trust {
+    padding-right: 20px; }
+    .trust .icon__check {
+      padding-left: 55px; } }
 /* Extra small devices */
 @media (max-width: 767px) {
   h1 {
@@ -734,7 +834,11 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .tab1 thead {
     font-size: 14px; }
   .tab1 td {
-    padding: 10px; } }
+    padding: 10px; }
+
+  .trust {
+    padding-left: 0;
+    font-size: 14px; } }
 @media (max-width: 599px) {
   h1 {
     font-size: 28px;
@@ -774,6 +878,20 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     display: inline-block; }
 
   .two-column > div {
+    width: 100%; }
+
+  .card-info__content .title {
+    width: 100%; }
+  .card-info__content .description {
+    padding-left: 0; }
+
+  .trust {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
+    font-size: 16px; }
+
+  .results {
     width: 100%; } }
 
 /*# sourceMappingURL=critical.css.map */
