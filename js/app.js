@@ -370,7 +370,10 @@ $(document).ready(function () {
             function setupMenu() {
                 var $menu = $('nav#m-menu');
                 var $openMenuBtn = $('#hamburger');
+                var $openMenuBtnWrapper = $('#m-menu-btn-wrapper');
                 var isMenuOpen = false;
+                var scrollBarWidth = getScrollBarWidth();
+                var html = document.documentElement || document.body;
 
                 $menu.mmenu({
                     "extensions": ["theme-dark"],
@@ -401,6 +404,8 @@ $(document).ready(function () {
                             selector = false;
                         }
 
+                        html.style.paddingRight = '';
+                        $openMenuBtnWrapper[0].style.right = 0;
                         isMenuOpen = false;
                     }
 
@@ -412,10 +417,31 @@ $(document).ready(function () {
                             isMenuOpen = false;
                         } else {
                             api.open();
+                            html.style.paddingRight = scrollBarWidth + 'px';
+                            $openMenuBtnWrapper[0].style.right = scrollBarWidth + 'px';
                             isMenuOpen = true;
                         }
                     });
 
+            }
+
+            function getScrollBarWidth() {
+                var div = document.createElement('div');
+                var scrollBarWidth = 0;
+
+                $(div).css({
+                    'width': '100px',
+                    'height': '100px',
+                    'overflowY': 'scroll',
+                    'visibility': 'hidden'
+                });
+                document.body.appendChild(div);
+
+                scrollBarWidth = div.offsetWidth - div.clientWidth;
+
+                document.body.removeChild(div);
+
+                return scrollBarWidth;
             }
         })();
     })();
