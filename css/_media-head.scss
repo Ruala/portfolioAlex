@@ -53,6 +53,14 @@
   .examples__box {
     width: 50%;
   }
+  .order-site {
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      line-height: 20px;
+    }
+  }
 }
 
 /* Extra small devices */
@@ -64,6 +72,27 @@
     float: none;
     width: 100%;
     max-width: 480px;
+  }
+  .order-site {
+    font-size: 14px;
+
+    h1 {
+      font-size: 30px;
+    }
+    .btn {
+      margin-top: 15px;
+    }
+  }
+  .development__box a {
+    font-size: 18px;
+  }
+  .tab1 {
+    thead {
+      font-size: 14px;
+    }
+    td {
+      padding: 10px;
+    }
   }
 }
 
@@ -86,5 +115,36 @@
       margin-bottom: 15px;
       line-height: 20px;
     }
+  }
+  .order-site {
+    height: auto;
+  }
+  .development__content > div {
+    width: 100%;
+  }
+  .work-process {
+    display: none;
+  }
+  .question__form .form__box > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .differences, .systems {
+    width: 100%;
+  }
+  .systems {
+    > div {
+      width: 50%;
+
+      > a {
+        display: block;
+      }
+    }
+    .image__box {
+      display: inline-block;
+    }
+  }
+  .two-column > div {
+    width: 100%;
   }
 }

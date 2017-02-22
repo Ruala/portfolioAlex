@@ -644,7 +644,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     }
 }
 .development__box {
-    height: 224px;
+  /*  height: 224px;*/
     padding: 6px;
     background-color: #ffffff;
     @include box-shadow(0 0 8px rgba(1, 0, 0, 0.02));
@@ -656,8 +656,8 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     }
 
     > div {
-        height: 212px;
-        overflow: hidden;
+        /*height: 212px;
+        overflow: hidden;*/
         padding: 30px 20px;
         border: 2px solid #f1f1f1;
         @include transition(all 0.2s ease-in-out);
