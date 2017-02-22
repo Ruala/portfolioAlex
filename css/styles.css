@@ -33,8 +33,7 @@ header::after, footer::after, div::after, nav::after, ul::after, form::after {
 .page-wrap {
   position: relative;
   z-index: 2;
-  width: 100%;
-  max-width: 1400px; }
+  width: 100%; }
 
 .container {
   position: relative;
