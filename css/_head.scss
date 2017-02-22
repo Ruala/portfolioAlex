@@ -51,6 +51,10 @@ header, footer, div, nav, ul, form {
     display: none;
 }
 
+.fs_16 {
+    font-size: 16px;
+}
+
 
 /* ----------------------------------------------
  Fonts Paragrahps
@@ -188,6 +192,7 @@ textarea {
     height: 43px;
     line-height: 39px;
     font-size: 16px;
+    font-weight: 500;
     color: $main_red;
     text-decoration: none;
     text-align: center;
@@ -601,12 +606,13 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 }
 
 
-.order-site, .development-cost, .work-process, .question {
-    padding: 30px 0;
+.development-cost, .work-process, .question, .control-systems, .content__block {
+    padding: 40px 0;
 }
 
 .order-site {
     height: 273px;
+    padding: 30px 0;
     font-size: 16px;
     text-align: center;
 
@@ -623,6 +629,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 
 .development-cost {
     text-align: center;
+    border-bottom: 1px solid rgba(181, 181, 181, 0.5);
 
     h2 {
         margin-bottom: 20px;
@@ -740,12 +747,110 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     }
 }
 
+.question {
+    border-top: 1px solid rgba(181, 181, 181, 0.5);
+    border-bottom: 1px solid rgba(181, 181, 181, 0.5);
+}
 .question__form {
+    padding: 45px 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 4px solid #f91017;
+
+    h3 {
+        margin-bottom: 10px;
+    }
     input {
         &:focus {
             color: #000;
             background-color: #fff000;
         }
+    }
+    .form__box {
+        margin: 20px 0 25px;
+        text-align: left;
+
+        > div {
+            float: left;
+            width: 33.33333%;
+            padding: 0 10px;
+        }
+    }
+    input[type="submit"] {
+        margin: 0 auto;
+    }
+}
+
+.control-systems {
+
+    h2 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+}
+.differences {
+    float: left;
+    width: 33.33333%;
+
+    p {
+        line-height: 21px;
+    }
+    .title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .btn {
+        margin: 20px 0;
+    }
+}
+.systems {
+    float: left;
+    width: 66.66666%;
+    text-align: center;
+
+    > div {
+        float: left;
+        width: 199px;
+        padding: 0 15px;
+        margin-bottom: 25px;
+    }
+    a {
+        color: #0089d2;
+    }
+    .image__box {
+        margin-bottom: 15px;
+
+        a {
+            display: table-cell;
+            vertical-align: middle;
+            width: 169px;
+            height: 140px;
+            border: 1px solid #d1d1d1;
+        }
+        img {
+            width: auto;
+        }
+    }
+}
+
+.content__block {
+    line-height: 21px;
+
+    h3, p, .fs_16 {
+        margin-bottom: 20px;
+    }
+}
+.two-column {
+    margin-top: 20px;
+
+    h3 {
+        padding: 0 15px;
+    }
+    > div {
+        float: left;
+        width: 50%;
+        padding: 0 15px;
     }
 }
 
