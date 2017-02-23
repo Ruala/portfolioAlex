@@ -100,7 +100,7 @@ button, input, textarea {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-button {
+button, .btn {
   cursor: pointer; }
 
 input, textarea {
@@ -586,14 +586,32 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   float: left;
   width: 50%;
   margin-bottom: 30px; }
+  .development__content > div.small {
+    width: 25%; }
+.development__content .accent .development__box {
+  color: white;
+  background-color: #fb151a; }
+  .development__content .accent .development__box:hover > div {
+    border-color: #fb151a; }
+  .development__content .accent .development__box > div {
+    border-color: #fff; }
+  .development__content .accent .development__box .price {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  .development__content .accent .development__box a {
+    color: white; }
 
 .development__box {
   /*  height: 224px;*/
   padding: 6px;
-  background-color: #ffffff;
+  background-color: #fff;
   -moz-box-shadow: 0 0 8px rgba(1, 0, 0, 0.02);
   -webkit-box-shadow: 0 0 8px rgba(1, 0, 0, 0.02);
-  box-shadow: 0 0 8px rgba(1, 0, 0, 0.02); }
+  box-shadow: 0 0 8px rgba(1, 0, 0, 0.02);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
   .development__box:hover > div {
     border-color: #fb151a; }
   .development__box > div {
@@ -630,6 +648,12 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
       -webkit-transform: rotateY(180deg);
       -o-transform: rotateY(180deg);
       transform: rotateY(180deg); }
+  .development__box .price {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700; }
+    .development__box .price span {
+      font-size: 21px; }
 
 .content__block {
   line-height: 21px; }
@@ -757,6 +781,10 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   background-image: url("../images/examples_bg.png");
   background-repeat: repeat; }
 
+.bg__pink-glass {
+  background-image: url("../images/bg_pink-glass.png");
+  background-size: cover; }
+
 .info {
   padding: 40px 0 55px;
   line-height: 25px; }
@@ -802,6 +830,38 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 .work-process h2 {
   margin-bottom: 20px;
   text-align: center; }
+.work-process p {
+  line-height: 24px;
+  font-size: 16px;
+  text-align: center; }
+
+.scheme {
+  max-width: 970px;
+  margin-top: 40px; }
+  .scheme > div {
+    float: left;
+    width: 33.33333%;
+    padding: 0 50px;
+    margin-bottom: 35px; }
+  .scheme .number {
+    float: left;
+    width: 52px;
+    height: 52px;
+    margin-right: 15px;
+    line-height: 48px;
+    font-size: 50px;
+    font-weight: 900;
+    color: #fb151a;
+    text-align: center;
+    border: 2px solid #d1d1d1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  .scheme .text-cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 52px;
+    line-height: 18px; }
 
 .tab1 {
   width: 100%;
@@ -1120,6 +1180,12 @@ footer {
   .order-site p {
     line-height: 20px; }
 
+  .development__content > div.small {
+    width: 50%; }
+
+  .scheme > div {
+    padding: 0 10px; }
+
   .trust {
     padding-right: 20px; }
     .trust .icon__check {
@@ -1147,12 +1213,21 @@ footer {
   .tab1 thead {
     font-size: 14px; }
   .tab1 td {
-    padding: 10px; }
+    width: 50%; }
+
+  .scheme {
+    max-width: 560px; }
+    .scheme > div {
+      width: 50%;
+      padding: 0 20px; }
 
   .trust {
     padding-left: 0;
     font-size: 14px; } }
 @media (max-width: 599px) {
+  .mob-none {
+    display: none; }
+
   h1 {
     font-size: 28px;
     text-align: center; }
@@ -1172,9 +1247,8 @@ footer {
 
   .development__content > div {
     width: 100%; }
-
-  .work-process {
-    display: none; }
+    .development__content > div.small {
+      width: 100%; }
 
   .question__form .form__box > div {
     width: 100%;
@@ -1205,7 +1279,12 @@ footer {
     font-size: 16px; }
 
   .results {
-    width: 100%; } }
+    width: 100%; }
+
+  .scheme {
+    max-width: 330px; }
+    .scheme > div {
+      width: 100%; } }
 /* Medium devices */
 /* Small devices */
 @media (max-width: 991px) {

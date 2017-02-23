@@ -114,7 +114,7 @@ button, input, textarea {
     border: none;
     @include box-shadow(none);
 }
-button {
+button, .btn {
     cursor: pointer;
 }
 input, textarea {
@@ -639,13 +639,39 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
         float: left;
         width: 50%;
         margin-bottom: 30px;
+
+        &.small {
+            width: 25%;
+        }
+    }
+    .accent {
+        .development__box {
+            color: white;
+            background-color: $main_red;
+
+            &:hover {
+                > div {
+                    border-color: $main_red;
+                }
+            }
+            > div {
+                border-color: #fff;
+            }
+            .price {
+                @include opacity(1);
+            }
+            a {
+                color: white;
+            }
+        }
     }
 }
 .development__box {
   /*  height: 224px;*/
     padding: 6px;
-    background-color: #ffffff;
+    background-color: #fff;
     @include box-shadow(0 0 8px rgba(1, 0, 0, 0.02));
+    @include transition(all 0.2s ease-in-out);
 
     &:hover {
         > div {
@@ -681,6 +707,15 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 
         &:hover img {
             @include transform(rotateY(180deg));
+        }
+    }
+    .price {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 700;
+
+        span {
+            font-size: 21px;
         }
     }
 }
@@ -844,4 +879,8 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 .bg__grey-tile {
     background-image: url("../images/examples_bg.png");
     background-repeat: repeat;
+}
+.bg__pink-glass {
+    background-image: url("../images/bg_pink-glass.png");
+    background-size: cover;
 }

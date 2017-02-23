@@ -63,8 +63,42 @@
     margin-bottom: 20px;
     text-align: center;
   }
+  p {
+    line-height: 24px;
+    font-size: 16px;
+    text-align: center;
+  }
 }
+.scheme {
+  max-width: 970px;
+  margin-top: 40px;
 
+  > div {
+    float: left;
+    width: 33.33333%;
+    padding: 0 50px;
+    margin-bottom: 35px;
+  }
+  .number {
+    float: left;
+    width: 52px;
+    height: 52px;
+    margin-right: 15px;
+    line-height: 48px;
+    font-size: 50px;
+    font-weight: 900;
+    color: $main_red;
+    text-align: center;
+    border: 2px solid #d1d1d1;
+    @include border-radius(5px);
+  }
+  .text-cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 52px;
+    line-height: 18px;
+  }
+}
 .tab1 {
   width: 100%;
   text-align: center;
