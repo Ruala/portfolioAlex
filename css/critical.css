@@ -81,8 +81,24 @@ a {
   a:hover {
     text-decoration: none; }
 
+ul, ol {
+  padding-left: 15px; }
+  ul ul, ul ol, ol ul, ol ol {
+    margin-top: 10px; }
+
 li {
-  list-style: none; }
+  margin-bottom: 10px;
+  color: #d74842; }
+  li span {
+    color: #303030; }
+
+ul li {
+  list-style: square; }
+
+ol li {
+  font-weight: 700; }
+  ol li span {
+    font-weight: 400; }
 
 img {
   width: 100%;
@@ -168,6 +184,10 @@ textarea {
   text-align: center;
   background-color: transparent;
   border: 2px solid #fb151a; }
+
+.btn__red-solid {
+  color: #fff;
+  background-color: #fb151a; }
 
 .btn__callback {
   display: inline-block;
@@ -492,11 +512,9 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .page-header__block h4 {
     margin-bottom: 25px; }
 
-.page-header__list {
-  padding-left: 15px; }
-  .page-header__list li {
-    margin-bottom: 20px;
-    list-style: square; }
+.page-header__list li {
+  margin-bottom: 20px;
+  color: #fff; }
 
 .examples {
   padding: 35px 0;
@@ -559,20 +577,33 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
     .examples__text .title:hover a {
       text-decoration: underline; }
 
-.development-cost, .work-process, .question, .control-systems, .card-info, .preview, .privilege, .content__block {
+.development-cost, .capability, .work-process, .question, .control-systems, .card-info, .preview, .privilege, .content__block {
   padding: 40px 0; }
 
 .order-site {
+  position: relative;
+  z-index: 2;
   height: 273px;
   padding: 30px 0;
   font-size: 16px;
   text-align: center; }
+  .order-site.host {
+    height: 375px;
+    padding-top: 40px; }
   .order-site h1 {
     margin-bottom: 10px; }
   .order-site p {
     line-height: 24px; }
   .order-site .btn {
     margin-top: 20px; }
+
+.host__logo {
+  margin-bottom: 20px;
+  text-align: center; }
+  .host__logo a {
+    display: inline-block; }
+  .host__logo img {
+    max-width: 100%; }
 
 .development-cost {
   text-align: center;
@@ -665,6 +696,13 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .two-column > div {
     float: left;
     width: 50%;
+    padding: 0 15px; }
+
+.three-column {
+  margin-bottom: 40px; }
+  .three-column > div {
+    float: left;
+    width: 33.33333%;
     padding: 0 15px; }
 
 .card-info h1 {
@@ -771,16 +809,29 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); }
 
-.bg__blue-glass {
-  background-image: url("../images/bg_blue-glass.png");
-  background-size: cover; }
+.overlay__bg-white {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); }
 
 .bg__grey-tile {
   background-image: url("../images/examples_bg.png");
   background-repeat: repeat; }
 
+.bg__blue-glass {
+  background-image: url("../images/bg_blue-glass.png");
+  background-size: cover; }
+
 .bg__pink-glass {
   background-image: url("../images/bg_pink-glass.png");
+  background-size: cover; }
+
+.bg__host {
+  background-image: url("../images/bg_host.png");
   background-size: cover; }
 
 /* Medium devices */
@@ -899,6 +950,8 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
 
   .order-site {
     height: auto; }
+    .order-site.host {
+      height: auto; }
 
   .development__content > div {
     width: 100%; }
@@ -919,7 +972,7 @@ html.mm-opening .hamburger--collapse .hamburger-inner::before {
   .systems .image__box {
     display: inline-block; }
 
-  .two-column > div {
+  .two-column > div, .three-column > div {
     width: 100%; }
 
   .card-info__content .title {

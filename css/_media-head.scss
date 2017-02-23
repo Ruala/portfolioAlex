@@ -146,6 +146,10 @@
   }
   .order-site {
     height: auto;
+
+    &.host {
+      height: auto;
+    }
   }
   .development__content > div {
     width: 100%;
@@ -173,8 +177,10 @@
       display: inline-block;
     }
   }
-  .two-column > div {
-    width: 100%;
+  .two-column, .three-column {
+    > div {
+      width: 100%;
+    }
   }
   .card-info__content {
     .title {
