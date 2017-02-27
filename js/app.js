@@ -389,7 +389,7 @@ $(document).ready(function () {
                     "navbars": [
                         {
                             'content': [
-                                '<div class="logo"><a href="/"><img src="images/logo-big.png" alt="logo"></a></div>'
+                                '<div class="logo"><a href="/"><img src="images/logo.png" alt="logo"></a></div>'
                             ],
                             'height': 2,
                             "position": "top"
@@ -399,11 +399,9 @@ $(document).ready(function () {
                         },*/
                         {
                             'content': [
-                                '<a class="fa fa-twitter" href="#/"></a>',
-                                'searchfield'
-
+                                '<a href="#call-back" class="btn__callback__mobile" data-role="lightbox"><div class="icon__mobile_big"></div><span>Перезвоните мне!</span></a>'
                              ],
-                            'height': 1,
+                            'height': 4,
                             "position": "bottom"
                         }
                     ]
