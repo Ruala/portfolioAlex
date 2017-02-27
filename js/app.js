@@ -376,7 +376,7 @@ $(document).ready(function () {
                 var html = document.documentElement || document.body;
 
                 $menu.mmenu({
-                    "extensions": ["theme-dark", "fullscreen"],
+                    "extensions": ["fullscreen"],
                     offCanvas: {
                         moveBackground: false,
                         position: "top",
