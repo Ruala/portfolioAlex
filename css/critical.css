@@ -89,7 +89,7 @@ ul, ol {
 li {
   margin-bottom: 10px;
   color: #d74842; }
-  li span {
+  li a, li span {
     color: #303030; }
 
 ul li {
@@ -365,23 +365,48 @@ header {
   right: 0;
   z-index: 50; }
 
+.mm-menu.mm-offcanvas.mm-bottom, .mm-menu.mm-offcanvas.mm-top {
+  height: 100%;
+  min-height: 480px; }
+.mm-menu.mm-theme-dark {
+  background-color: #fdfdfd; }
+
 .mm-navbar {
-  height: 64px; }
+  height: 64px;
+  padding: 0 20px;
+  border: none; }
   .mm-navbar > * {
     padding: 22px 0; }
 
 .mm-listview {
-  line-height: 20px;
-  font-size: 18px;
-  text-transform: uppercase; }
-  .mm-listview > li > a, .mm-listview > li > span {
-    padding: 20px 10px 20px 20px; }
+  padding: 0 20px;
+  line-height: 22px;
+  font-size: 12px;
+  list-style: decimal-leading-zero;
+  /*> li {
+      >a, >span {
+          padding: 20px 10px 20px 20px;
+      }
+  }*/ }
+  .mm-listview > li {
+    list-style: decimal-leading-zero; }
+  .mm-listview li {
+    color: #414141; }
+    .mm-listview li:hover {
+      color: #ff4b59; }
+  .mm-listview > li:not(.mm-divider)::after {
+    display: none; }
+  .mm-listview a {
+    text-decoration: underline; }
+    .mm-listview a:hover {
+      text-decoration: underline; }
 
-.mm-title {
-  line-height: 20px;
-  font-size: 18px;
-  text-transform: uppercase; }
-
+/*.mm-title {
+    display: none;
+    line-height: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}*/
 #mm-blocker {
   z-index: 1200;
   cursor: pointer; }
