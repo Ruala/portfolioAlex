@@ -376,15 +376,37 @@ $(document).ready(function () {
                 var html = document.documentElement || document.body;
 
                 $menu.mmenu({
-                    "extensions": ["theme-dark"],
+                    "extensions": ["theme-dark", "fullscreen"],
                     offCanvas: {
                         moveBackground: false,
                         position: "top",
                         zposition: "front"
                     },
-                    navbar: {
+                    navbar: false,
+                    /*{
                         title: 'Меню' //'Меню'
-                    }
+                    },*/
+                    "navbars": [
+                        {
+                            'content': [
+                                '<div class="logo"><a href="/"><img src="images/logo-big.png" alt="logo"></a></div>'
+                            ],
+                            'height': 2,
+                            "position": "top"
+                        },
+                        /*{
+                            "position": "top"
+                        },*/
+                        {
+                            'content': [
+                                '<a class="fa fa-twitter" href="#/"></a>',
+                                'searchfield'
+
+                             ],
+                            'height': 1,
+                            "position": "bottom"
+                        }
+                    ]
                 });
 
                 var selector = false;
