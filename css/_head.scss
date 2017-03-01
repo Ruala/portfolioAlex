@@ -523,9 +523,9 @@ header {
 .mm-listview {
     position: absolute;
     top: 50%;
+    width: 100%;
     padding: 0 20px;
-    line-height: 22px;
-    font-size: 12px;
+    font-size: 20px;
     list-style: decimal-leading-zero;
     @include transform(translate3d(0, -50%, 0));
 
@@ -541,8 +541,8 @@ header {
         }
     }
     > li {
-        >a, >span {
-            padding: 5px 10px 5px 20px;
+        > a, > span {
+            padding: 5px 10px 5px 35px;
         }
     }
     > li:not(.mm-divider)::after {

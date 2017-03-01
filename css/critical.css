@@ -455,10 +455,9 @@ header {
 .mm-listview {
   position: absolute;
   top: 50%;
-  transform: translate3d(0, -50%, 0);
+  width: 100%;
   padding: 0 20px;
-  line-height: 22px;
-  font-size: 12px;
+  font-size: 20px;
   list-style: decimal-leading-zero;
   -ms-transform: translate3d(0, -50%, 0);
   -moz-transform: translate3d(0, -50%, 0);
@@ -473,7 +472,7 @@ header {
     .mm-listview li:hover {
       color: #ff4b59; }
   .mm-listview > li > a, .mm-listview > li > span {
-    padding: 5px 10px 5px 20px; }
+    padding: 5px 10px 5px 35px; }
   .mm-listview > li:not(.mm-divider)::after {
     display: none; }
   .mm-listview a {
