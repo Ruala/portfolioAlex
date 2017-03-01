@@ -19,7 +19,7 @@ html, body {
 
 body {
     min-width: 320px;
-    font: 14px $firaSans;
+    font: 16px $firaSans;
     font-weight: 400;
     color: $textGrey;
     background-color: #fff;
@@ -51,8 +51,8 @@ header, footer, div, nav, ul, form {
     display: none;
 }
 
-.fs_16 {
-    font-size: 16px;
+.fs_18 {
+    font-size: 18px;
 }
 
 
@@ -432,6 +432,7 @@ header {
 
 .logo {
     position: absolute;
+    z-index: 10;
     top: 0;
     left: 15px;
     width: 165px;
@@ -660,7 +661,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     /*float: left;
     max-width: 770px;*/
     padding-right: 330px;
-    font-size: 16px;
+    font-size: 18px;
 
     h1 {
         margin-bottom: 30px;
@@ -741,7 +742,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     z-index: 2;
     height: 70px;
     padding: 15px 10px 15px 85px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #eaeaea;
 
     .data {
@@ -778,7 +779,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     z-index: 2;
     height: 273px;
     padding: 30px 0;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
 
     &.host {
@@ -894,7 +895,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     }
     .price {
         margin-top: 10px;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 700;
 
         span {
@@ -927,7 +928,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
             }
             span {
                 margin: 0 30px 0 10px;
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 700;
                 color: #d74842;
             }
@@ -943,7 +944,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
         text-align: center;
     }
 
-    h3, p, .fs_16 {
+    h3, p, .fs_18 {
         margin-bottom: 20px;
     }
 }
@@ -1017,7 +1018,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
 }
 
 .privilege {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 25px;
 
     h2 {

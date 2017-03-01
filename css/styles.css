@@ -20,7 +20,7 @@ html, body {
 
 body {
   min-width: 320px;
-  font: 14px "Fira Sans", sans-serif;
+  font: 16px "Fira Sans", sans-serif;
   font-weight: 400;
   color: #303030;
   background-color: #fff; }
@@ -48,8 +48,8 @@ header::after, footer::after, div::after, nav::after, ul::after, form::after {
 .hidden {
   display: none; }
 
-.fs_16 {
-  font-size: 16px; }
+.fs_18 {
+  font-size: 18px; }
 
 /* ----------------------------------------------
  Fonts Paragrahps
@@ -382,6 +382,7 @@ header {
 
 .logo {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 15px;
   width: 165px;
@@ -601,7 +602,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   /*float: left;
   max-width: 770px;*/
   padding-right: 330px;
-  font-size: 16px; }
+  font-size: 18px; }
   .page-header__content h1 {
     margin-bottom: 30px; }
     .page-header__content h1 span {
@@ -669,7 +670,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   z-index: 2;
   height: 70px;
   padding: 15px 10px 15px 85px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #eaeaea; }
   .examples__text .data {
     position: absolute;
@@ -697,7 +698,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   z-index: 2;
   height: 273px;
   padding: 30px 0;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center; }
   .order-site.host {
     height: 375px;
@@ -791,7 +792,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
       transform: rotateY(180deg); }
   .development__box .price {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700; }
     .development__box .price span {
       font-size: 21px; }
@@ -812,7 +813,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
       display: inline-block; }
     .fast-start .text__box .top-line span {
       margin: 0 30px 0 10px;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       color: #d74842; }
 
@@ -821,7 +822,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   .content__block h2 {
     margin-bottom: 20px;
     text-align: center; }
-  .content__block h3, .content__block p, .content__block .fs_16 {
+  .content__block h3, .content__block p, .content__block .fs_18 {
     margin-bottom: 20px; }
 
 .two-column {
@@ -879,7 +880,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     margin-bottom: 0; }
 
 .privilege {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 25px; }
   .privilege h2 {
     margin-bottom: 20px;
@@ -1133,6 +1134,8 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   margin-bottom: 20px;
   text-align: center; }
 .capability h3 {
+  margin-bottom: 10px; }
+.capability p {
   margin-bottom: 10px; }
 
 .includes {
