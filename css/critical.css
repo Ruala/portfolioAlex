@@ -192,6 +192,22 @@ textarea {
     height: 17px;
     background-image: url("../images/icon__addfile.png"); }
 
+.contacts__form {
+  margin-top: 20px; }
+  .contacts__form input {
+    height: 44px;
+    margin-bottom: 14px; }
+  .contacts__form textarea {
+    height: 218px;
+    margin-bottom: 25px; }
+  .contacts__form .form__box {
+    float: left;
+    padding: 0 15px; }
+    .contacts__form .form__box:first-of-type {
+      width: 41.66666%; }
+    .contacts__form .form__box:last-of-type {
+      width: 58.33333%; }
+
 .btn__red {
   display: block;
   width: 187px;
@@ -663,7 +679,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     .examples__text .title:hover a {
       text-decoration: underline; }
 
-.development-cost, .capability, .work-process, .question, .control-systems, .card-info, .preview, .privilege, .content__block {
+.development-cost, .capability, .includes, .contact-info, .work-process, .question, .control-systems, .card-info, .preview, .privilege, .content__block {
   padding: 40px 0; }
 
 .order-site {
@@ -770,8 +786,29 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     .development__box .price span {
       font-size: 21px; }
 
+.fast-start > div {
+  float: left;
+  padding: 0 15px; }
+.fast-start .image__box {
+  width: 33.33333%; }
+.fast-start .text__box {
+  width: 66.66666%;
+  text-align: left; }
+  .fast-start .text__box p {
+    margin-bottom: 20px; }
+  .fast-start .text__box .top-line {
+    color: #717171; }
+    .fast-start .text__box .top-line span {
+      margin: 0 30px 0 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #d74842; }
+
 .content__block {
   line-height: 21px; }
+  .content__block h2 {
+    margin-bottom: 20px;
+    text-align: center; }
   .content__block h3, .content__block p, .content__block .fs_16 {
     margin-bottom: 20px; }
 
@@ -815,8 +852,11 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   text-align: center; }
 
 .preview__image {
-  max-width: 923px;
+  max-width: 921px;
+  padding-top: 49px;
   margin-bottom: 40px;
+  background-image: url("../images/ramka.png");
+  background-position: left top;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -879,6 +919,38 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     color: #00b7f4; }
   .view-more__links span {
     margin: 0 10px; }
+
+.contact-info h1 {
+  margin-bottom: 40px;
+  text-align: center; }
+.contact-info h2 {
+  margin: 30px 0 15px;
+  text-align: center; }
+.contact-info .icon {
+  margin-bottom: 20px;
+  line-height: 20px; }
+.contact-info .icon__mobile-red::before {
+  top: 0;
+  left: 3px; }
+
+.map-wrap {
+  position: relative;
+  z-index: 2; }
+  .map-wrap::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    border: 10px solid rgba(238, 238, 238, 0.8);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.map {
+  height: 442px;
+  background-image: url("../images/map.jpg"); }
 
 .bg__grey {
   background-color: rgba(234, 234, 234, 0.5); }

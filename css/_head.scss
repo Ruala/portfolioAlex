@@ -239,6 +239,30 @@ textarea {
     }
 }
 
+.contacts__form {
+    margin-top: 20px;
+
+    input {
+        height: 44px;
+        margin-bottom: 14px;
+    }
+    textarea {
+        height: 218px;
+        margin-bottom: 25px;
+    }
+    .form__box {
+        float: left;
+        padding: 0 15px;
+
+        &:first-of-type {
+            width: 41.66666%;
+        }
+        &:last-of-type {
+            width: 58.33333%;
+        }
+    }
+}
+
 .btn__red {
     display: block;
     width: 187px;
@@ -741,7 +765,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
 }
 
 
-.development-cost, .capability, .work-process, .question, .control-systems, .card-info, .preview, .privilege, .content__block {
+.development-cost, .capability, .includes, .contact-info, .work-process, .question, .control-systems, .card-info, .preview, .privilege, .content__block {
     padding: 40px 0;
 }
 
@@ -875,8 +899,42 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     }
 }
 
+.fast-start {
+
+    > div {
+        float: left;
+        padding: 0 15px;
+    }
+    .image__box {
+        width: 33.33333%;
+    }
+    .text__box {
+        width: 66.66666%;
+        text-align: left;
+
+        p {
+            margin-bottom: 20px;
+        }
+        .top-line {
+            color: #717171;
+
+            span {
+                margin: 0 30px 0 10px;
+                font-size: 16px;
+                font-weight: 700;
+                color: #d74842;
+            }
+        }
+    }
+}
+
 .content__block {
     line-height: 21px;
+
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
     h3, p, .fs_16 {
         margin-bottom: 20px;
@@ -938,8 +996,11 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     }
 }
 .preview__image {
-    max-width: 923px;
+    max-width: 921px;
+    padding-top: 49px;
     margin-bottom: 40px;
+    background-image: url("../images/ramka.png");
+    background-position: left top;
     @include border-radius(3px);
     @include box-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
 
@@ -1018,6 +1079,45 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     }
 }
 
+.contact-info {
+
+    h1 {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    h2 {
+        margin: 30px 0 15px;
+        text-align: center;
+    }
+    .icon {
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
+    .icon__mobile-red::before {
+        top: 0;
+        left: 3px;
+    }
+}
+.map-wrap {
+    position: relative;
+    z-index: 2;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        border: 10px solid rgba(238, 238, 238, 0.8);
+        @include box-sizing(border-box);
+    }
+
+}
+.map {
+    height: 442px;
+    background-image: url("../images/map.jpg");
+}
 
 
 
