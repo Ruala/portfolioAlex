@@ -314,6 +314,9 @@ footer {
   h3 {
     margin-bottom: 20px;
   }
+  p {
+    margin-bottom: 10px;
+  }
 }
 
 .footer__form {
@@ -336,6 +339,14 @@ footer {
 .footer__contacts {
   float: left;
   width: 33.33333%;
+}
+.footer__social {
+  float: left;
+  width: 25%;
+}
+.footer__copyright {
+  float: left;
+  width: 41.66666%;
 }
 
 .contact-us {
