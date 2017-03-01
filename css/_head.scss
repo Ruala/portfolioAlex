@@ -521,10 +521,13 @@ header {
 }
 
 .mm-listview {
+    position: absolute;
+    top: 50%;
     padding: 0 20px;
     line-height: 22px;
     font-size: 12px;
     list-style: decimal-leading-zero;
+    @include transform(translate3d(0, -50%, 0));
 
     li {
         color: #414141;

@@ -455,10 +455,17 @@ header {
   border: none; }
 
 .mm-listview {
+  position: absolute;
+  top: 50%;
   padding: 0 20px;
   line-height: 22px;
   font-size: 12px;
-  list-style: decimal-leading-zero; }
+  list-style: decimal-leading-zero;
+  -ms-transform: translate3d(0, -50%, 0);
+  -moz-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0); }
   .mm-listview li {
     color: #414141; }
     .mm-listview li::before {
