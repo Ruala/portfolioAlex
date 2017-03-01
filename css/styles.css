@@ -252,7 +252,7 @@ textarea {
 
 .btn__callback__mobile {
   display: inline-block;
-  width: 120px;
+  width: 180px;
   height: 130px;
   padding: 0;
   font-weight: 300;
@@ -260,6 +260,7 @@ textarea {
   text-align: center;
   text-decoration: none; }
   .btn__callback__mobile span {
+    font-size: 18px;
     font-style: italic;
     border-bottom: 1px dashed #656565; }
 
