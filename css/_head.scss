@@ -918,6 +918,9 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
         .top-line {
             color: #717171;
 
+            p {
+                display: inline-block;
+            }
             span {
                 margin: 0 30px 0 10px;
                 font-size: 16px;

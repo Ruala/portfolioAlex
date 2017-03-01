@@ -340,7 +340,7 @@ footer {
   float: left;
   width: 33.33333%;
 }
-.footer__social {
+.footer__communication {
   float: left;
   width: 25%;
 }
@@ -386,7 +386,9 @@ footer {
     background-image: url("../images/icon__flickr.png");
   }
 }
-
+.contacts__social {
+  float: right;
+}
 
 .icon {
   position: relative;

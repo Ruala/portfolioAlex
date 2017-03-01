@@ -119,6 +119,18 @@
     padding-left: 0;
     font-size: 14px;
   }
+  .includes .three-column > div {
+    width: 100%;
+  }
+  .footer__copyright, .footer__communication {
+    margin-bottom: 20px;
+  }
+  .footer__communication {
+    width: 58.33333%;
+  }
+  .contacts__social {
+    float: none;
+  }
 }
 
 @media (max-width: 599px) {
@@ -205,5 +217,17 @@
     > div {
       width: 100%;
     }
+  }
+  .fast-start {
+    .image__box, .text__box {
+      width: 100%;
+    }
+  }
+  .contacts__form .form__box {
+    width: 100% !important;
+  }
+  .footer__copyright, .footer__communication {
+    float: none;
+    width: 100%;
   }
 }
