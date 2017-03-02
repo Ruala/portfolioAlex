@@ -47,7 +47,7 @@ header::after, footer::after, div::after, nav::after, ul::after, form::after {
   display: none; }
 
 .fs_18 {
-  font-size: 16px; }
+  font-size: 18px; }
 
 /* ----------------------------------------------
  Fonts Paragrahps
@@ -703,7 +703,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   font-size: 18px;
   text-align: center; }
   .order-site.host {
-    height: 375px;
+    height: 480px;
     padding-top: 40px; }
   .order-site h1 {
     margin-bottom: 10px; }
