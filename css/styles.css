@@ -826,7 +826,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     margin-bottom: 20px; }
 
 .two-column {
-  margin-top: 20px; }
+  margin: 20px 0; }
   .two-column h3 {
     padding: 0 15px; }
   .two-column > div {
