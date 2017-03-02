@@ -18,7 +18,7 @@ html, body {
 
 body {
   min-width: 320px;
-  font: 16px "Fira Sans", sans-serif;
+  font: 14px "Fira Sans", sans-serif;
   font-weight: 400;
   color: #303030;
   background-color: #fff; }
@@ -47,27 +47,34 @@ header::after, footer::after, div::after, nav::after, ul::after, form::after {
   display: none; }
 
 .fs_18 {
-  font-size: 18px; }
+  font-size: 16px; }
 
 /* ----------------------------------------------
  Fonts Paragrahps
  ---------------------------------------------- */
 h1 {
-  margin: 0;
+  margin: 0 0 30px;
   font-size: 42px;
   font-weight: 500; }
 
 h2 {
+  margin-bottom: 20px;
   font-size: 30px;
   font-weight: 500; }
 
 h3 {
+  margin-bottom: 10px;
   font-size: 21px;
   font-weight: 700; }
 
 h4 {
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 400; }
+
+p {
+  margin-bottom: 10px;
+  line-height: 21px; }
 
 b {
   font-weight: 700; }
@@ -601,11 +608,9 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   max-width: 770px;*/
   padding-right: 330px;
   font-size: 18px; }
-  .page-header__content h1 {
-    margin-bottom: 30px; }
-    .page-header__content h1 span {
-      padding: 5px 10px;
-      background-color: #fb151a; }
+  .page-header__content h1 span {
+    padding: 5px 10px;
+    background-color: #fb151a; }
   .page-header__content p {
     margin-bottom: 30px;
     line-height: 25px; }
@@ -631,7 +636,6 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   padding: 35px 0;
   border-bottom: 1px solid #ececec; }
   .examples h2 {
-    margin-bottom: 20px;
     text-align: center; }
 
 .examples__box {
@@ -719,8 +723,6 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
 .development-cost {
   text-align: center;
   border-bottom: 1px solid rgba(181, 181, 181, 0.5); }
-  .development-cost h2 {
-    margin-bottom: 20px; }
 
 .development__content > div {
   float: left;
@@ -795,6 +797,9 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     .development__box .price span {
       font-size: 21px; }
 
+.capability {
+  font-size: 16px; }
+
 .fast-start > div {
   float: left;
   padding: 0 15px; }
@@ -816,9 +821,8 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
       color: #d74842; }
 
 .content__block {
-  line-height: 21px; }
+  font-size: 16px; }
   .content__block h2 {
-    margin-bottom: 20px;
     text-align: center; }
   .content__block h3, .content__block p, .content__block .fs_18 {
     margin-bottom: 20px; }
@@ -859,7 +863,6 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     padding-left: 185px; }
 
 .preview h2 {
-  margin-bottom: 20px;
   text-align: center; }
 
 .preview__image {
@@ -881,7 +884,6 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   font-size: 18px;
   line-height: 25px; }
   .privilege h2 {
-    margin-bottom: 20px;
     text-align: center; }
 
 .privilege__content p {
