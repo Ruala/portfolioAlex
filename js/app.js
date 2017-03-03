@@ -399,9 +399,9 @@ $(document).ready(function () {
                         },*/
                         {
                             'content': [
-                                '<a href="#call-back" class="btn__callback__mobile" data-role="lightbox"><div class="icon__mobile_big"></div><span>Перезвоните мне!</span></a>'
+                                '<a href="#call-back" class="btn__callback__mobile" data-role="lightbox"><div class="icon__mobile_big"></div></a>'
                              ],
-                            'height': 4,
+                            'height': 3,
                             "position": "bottom"
                         }
                     ]
