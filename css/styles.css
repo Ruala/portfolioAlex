@@ -165,7 +165,7 @@ textarea {
   border: 1px solid #747474; }
 .form input {
   margin-bottom: 20px; }
-  .form input:focus:not([type="submit"]), .form input.reverse {
+  .form input:focus, .form input.reverse {
     color: #4d4d4d;
     background-color: #f9f9f9;
     border-color: #9f9f9f; }
@@ -209,6 +209,9 @@ textarea {
   .contacts__form textarea {
     height: 218px;
     margin-bottom: 25px; }
+  .contacts__form input:focus, .contacts__form textarea:focus {
+    color: #000;
+    background-color: #fff000; }
   .contacts__form .form__box {
     float: left;
     padding: 0 15px; }
@@ -705,7 +708,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   font-size: 18px;
   text-align: center; }
   .order-site.host {
-    height: 375px;
+    height: 480px;
     padding-top: 40px; }
   .order-site h1 {
     margin-bottom: 10px; }
@@ -726,28 +729,32 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   text-align: center;
   border-bottom: 1px solid rgba(181, 181, 181, 0.5); }
 
-.development__content > div {
-  float: left;
-  width: 50%;
-  margin-bottom: 30px; }
-  .development__content > div.small {
-    width: 25%; }
-.development__content .accent .development__box {
-  color: white;
-  background-color: #fb151a; }
-  .development__content .accent .development__box:hover > div {
-    border-color: #fb151a; }
-  .development__content .accent .development__box > div {
-    border-color: #fff; }
-  .development__content .accent .development__box .price {
-    opacity: 1;
-    filter: alpha(opacity=100); }
-  .development__content .accent .development__box a {
-    color: white; }
+.development__content {
+  font-size: 0; }
+  .development__content > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-bottom: 30px; }
+    .development__content > div.small {
+      width: 25%; }
+  .development__content .accent .development__box {
+    color: white;
+    background-color: #fb151a; }
+    .development__content .accent .development__box:hover > div {
+      border-color: #fb151a; }
+    .development__content .accent .development__box > div {
+      border-color: #fff; }
+    .development__content .accent .development__box .price {
+      opacity: 1;
+      filter: alpha(opacity=100); }
+    .development__content .accent .development__box a {
+      color: white; }
 
 .development__box {
   /*  height: 224px;*/
   padding: 6px;
+  font-size: 14px;
   background-color: #fff;
   -moz-box-shadow: 0 0 8px rgba(1, 0, 0, 0.02);
   -webkit-box-shadow: 0 0 8px rgba(1, 0, 0, 0.02);
@@ -1249,6 +1256,9 @@ footer {
     width: 48%; }
   .footer__form .btn__submit {
     margin-left: 4%; }
+  .footer__form input:focus, .footer__form textarea:focus {
+    color: #000;
+    background-color: #fff000; }
 
 .footer__contacts {
   float: left;

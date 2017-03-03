@@ -200,7 +200,7 @@ textarea {
     input {
         margin-bottom: 20px;
 
-      &:focus:not([type="submit"]), &.reverse {
+      &:focus, &.reverse {
         color: $bg_footer;
         background-color: #f9f9f9;
         border-color: #9f9f9f;
@@ -256,6 +256,12 @@ textarea {
     textarea {
         height: 218px;
         margin-bottom: 25px;
+    }
+    input, textarea {
+        &:focus {
+            color: #000;
+            background-color: #fff000;
+        }
     }
     .form__box {
         float: left;
@@ -819,9 +825,11 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     border-bottom: 1px solid rgba(181, 181, 181, 0.5);
 }
 .development__content {
+    font-size: 0;
 
     > div {
-        float: left;
+        display: inline-block;
+        vertical-align: top;
         width: 50%;
         margin-bottom: 30px;
 
@@ -854,6 +862,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
 .development__box {
   /*  height: 224px;*/
     padding: 6px;
+    font-size: 14px;
     background-color: #fff;
     @include box-shadow(0 0 8px rgba(1, 0, 0, 0.02));
     @include transition(all 0.2s ease-in-out);
