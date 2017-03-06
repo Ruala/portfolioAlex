@@ -582,7 +582,7 @@ $(document).ready(function () {
                 isActiveMap = false;
             }
         });
-        
+
         function init() {
             var myMap = new ymaps.Map('map', {
                 center: [55.82689256889113, 37.3328245],
