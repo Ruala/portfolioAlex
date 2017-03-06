@@ -963,6 +963,8 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
+  .map-wrap.active::before {
+    display: none; }
 
 .map {
   height: 442px;
