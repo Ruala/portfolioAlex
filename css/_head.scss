@@ -191,6 +191,58 @@ textarea {
     padding: 10px 15px;
 }
 
+.select__wrap {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    margin: 0;
+    color: #999;
+    background-color: #fff;
+    border: 1px solid #ddd;
+
+    &::after, &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 2;
+        pointer-events: none;
+    }
+    &::before {
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 44px;
+        background-color: #fff;
+    }
+    &::after {
+        top: 19px;
+        right: 14px;
+        background-color: $main_red;
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+        border-top: 7px solid $main_red;
+    }
+
+    select {
+        width: 100%;
+        height: 44px;
+        padding: 0 45px 0 15px;
+        color: #999;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+    }
+
+    option {
+        padding: 5px 45px 5px 15px;
+        background-color: #fff;
+    }
+}
+
 .form {
     input, textarea {
         color: #f9f9f9;
