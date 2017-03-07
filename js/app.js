@@ -604,12 +604,6 @@ $(document).ready(function () {
             });
 
             myMap.geoObjects.add(placemark);
-
-            //placemark event hadler
-            /*placemark.events.add('click', function (e) {
-             e.preventDefault();
-             //some func
-             });*/
         }
     })();
 });
