@@ -1,5 +1,5 @@
 /*Form*/
-(function(){
+(function () {
     function FormController(options) {
         this._submitSelector = options.submitSelector || 'input[type="submit"]';
         this._listenedBlock = options.listenedBlock || 'body';
@@ -9,12 +9,13 @@
         this._reject = options.reject || null;
         this._maxFileSize = options.maxFileSize || 2; //MB
     }
+
     FormController.prototype.init = function () {
-        if(!document.querySelector(this._submitSelector)) return;
+        if (!document.querySelector(this._submitSelector)) return;
 
         $(this._listenedBlock).on('click', this.formListeners.bind(this));
 
-        if($(this._listenedBlock).find('input[type="file"]').length) {
+        if ($(this._listenedBlock).find('input[type="file"]').length) {
             $(this._listenedBlock).change(this.uploadListener.bind(this));
         }
     };
@@ -64,7 +65,7 @@
                     $(this).addClass('form-success');
                     $(passCurr).addClass('form-success');
                 }
-            }else if($(this).is('textarea') && vVal.length < 10 && vVal.length > 0  && requiredField) {
+            } else if ($(this).is('textarea') && vVal.length < 10 && vVal.length > 0 && requiredField) {
                 placeholderMess = 'Сообщение слишком короткое!';
                 vResult = false;
             } else if (requiredField && vVal.length) {
@@ -84,7 +85,7 @@
     FormController.prototype.uploadListener = function (e) {
         var elem = e.target;
 
-        if(!elem.matches('input[type="file"]'))  return;
+        if (!elem.matches('input[type="file"]'))  return;
 
         var size = this.getFileSize(elem);
 
@@ -145,7 +146,7 @@
 
         $input.each(function () {
             var name = $(this).attr('name');
-            var placeholderMess =  $(this).attr('data-old-placeholder');
+            var placeholderMess = $(this).attr('data-old-placeholder');
 
             $(this).removeClass('form-success');
             $(this).removeClass('form-fail');
@@ -292,7 +293,7 @@
 
 $(document).ready(function () {
     /*ScrollToAnchor && mobile menu*/
-    (function(){
+    (function () {
         /*ScrollToAnchor class*/
         function ScrollToAnchor(options) {
             this._listenedBlock = options.listenedBlock || document.body;
@@ -350,7 +351,7 @@ $(document).ready(function () {
         };
 
         /*content scroll*/
-        (function(){
+        (function () {
             var pageScroll = new ScrollToAnchor({
                 listenedBlock: '.page-wrap'
             });
@@ -358,7 +359,7 @@ $(document).ready(function () {
         })();
 
         /*mmenu*/
-        (function(){
+        (function () {
             /*mmenu scroll*/
             var mmenuScroll = new ScrollToAnchor({
                 listenedBlock: document.getElementById('#m-menu')
@@ -384,8 +385,8 @@ $(document).ready(function () {
                     },
                     navbar: false,
                     /*{
-                        title: 'Меню' //'Меню'
-                    },*/
+                     title: 'Меню' //'Меню'
+                     },*/
                     "navbars": [
                         {
                             'content': [
@@ -395,12 +396,12 @@ $(document).ready(function () {
                             "position": "top"
                         },
                         /*{
-                            "position": "top"
-                        },*/
+                         "position": "top"
+                         },*/
                         {
                             'content': [
                                 '<a href="#call-back" class="btn__callback__mobile" data-role="lightbox"><div class="icon__mobile_big"></div></a>'
-                             ],
+                            ],
                             'height': 3,
                             "position": "bottom"
                         }
@@ -408,17 +409,16 @@ $(document).ready(function () {
                 });
 
                 var selector = false;
-                $menu.find( 'li > a' ).on(
+                $menu.find('li > a').on(
                     'click',
-                    function( e )
-                    {
+                    function (e) {
                         selector = this.hash;
                     }
                 );
 
-                var api = $menu.data( 'mmenu' );
-                api.bind( 'closed',
-                    function() {
+                var api = $menu.data('mmenu');
+                api.bind('closed',
+                    function () {
                         if (selector) {
                             mmenuScroll.smoothScroll(selector);
                             selector = false;
@@ -428,7 +428,6 @@ $(document).ready(function () {
                         $openMenuBtnWrapper[0].style.right = 0;
                         isMenuOpen = false;
                     }
-
                 );
                 $openMenuBtn.on('click',
                     function () {
@@ -484,10 +483,10 @@ $(document).ready(function () {
         var $simpleLightbox = $('[data-role="lightbox"]');
 
         $simpleLightbox.fancybox({
-            padding   : 0,
-            margin    : 0,
+            padding: 0,
+            margin: 0,
             tpl: {
-                closeBtn : '<span class="btn__close"></span>'
+                closeBtn: '<span class="btn__close"></span>'
             }
         });
     })();
@@ -505,13 +504,14 @@ $(document).ready(function () {
     })();
 
     /*ScrollUp button*/
-    (function(){
+    (function () {
         function ScrollTop(tmpl) {
             this._tmpl = tmpl || '<div id="scrollUp"><i class="upButton"></i></div>';
             this._isActive = false;
 
             this.init();
         }
+
         ScrollTop.prototype.init = function () {
             this._$btn = $(this._tmpl);
             $('body').append(this._$btn);
@@ -522,21 +522,94 @@ $(document).ready(function () {
             $(window).on('scroll', this.scrollBtnToggler.bind(this));
         };
         ScrollTop.prototype.scrollBtnToggler = function () {
-            if ( $(document).scrollTop() > $(window).height() && !this._isActive ) {
-                this._$btn.fadeIn({queue : false, duration: 400})
-                    .animate({'bottom' : '40px'}, 400);
+            if ($(document).scrollTop() > $(window).height() && !this._isActive) {
+                this._$btn.fadeIn({queue: false, duration: 400})
+                    .animate({'bottom': '40px'}, 400);
                 this._isActive = true;
-            } else if ( $(document).scrollTop() < $(window).height() && this._isActive ) {
-                this._$btn.fadeOut({queue : false, duration: 400})
-                    .animate({'bottom' : '-20px'}, 400);
+            } else if ($(document).scrollTop() < $(window).height() && this._isActive) {
+                this._$btn.fadeOut({queue: false, duration: 400})
+                    .animate({'bottom': '-20px'}, 400);
                 this._isActive = false;
             }
         };
-        ScrollTop.prototype.scrollTop = function(){
+        ScrollTop.prototype.scrollTop = function () {
             $("html, body").animate({scrollTop: 0}, 500);
             return false;
         };
 
         var scrollTopBtn = new ScrollTop();
+    })();
+
+    /*Yandex map*/
+    (function () {
+        if (!document.getElementById('map')) return;
+
+        var firstScript = document.querySelectorAll('script')[0];
+        var script = document.createElement('script');
+        script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+        script.async = true;
+        firstScript.parentNode.insertBefore(script, firstScript);
+
+
+        var placemarkData = {
+            coords: [55.82689256889113, 37.3328245],
+            hintContent: 'Talanta',
+            balloonContent: 'Hello!'
+        };
+        script.addEventListener('load', function () {
+            ymaps.ready(init);
+        });
+
+        var $mapWrapper = $('.map-wrap');
+        var isActiveMap = false;
+
+        $mapWrapper.on('mouseleave', function () {
+            $mapWrapper.removeClass('active');
+            isActiveMap = false;
+        });
+        $('body').on('click', function (e) {
+            var target = e.target;
+
+            if ($(target).closest($mapWrapper).length) {
+                if (isActiveMap) return;
+
+                $mapWrapper.addClass('active');
+                isActiveMap = true;
+            } else {
+                if (!isActiveMap) return;
+
+                $mapWrapper.removeClass('active');
+                isActiveMap = false;
+            }
+        });
+
+        function init() {
+            var myMap = new ymaps.Map('map', {
+                center: [55.82689256889113, 37.3328245],
+                zoom: 16
+            }, {
+                searchControlProvider: 'yandex#search'
+            });
+
+            //myMap.behaviors.disable('scrollZoom');
+
+            var placemark = new ymaps.Placemark(placemarkData.coords, {
+                hintContent: placemarkData.hintContent,
+                balloonContent: placemarkData.balloonContent
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'images/map-point.png',
+                iconImageSize: [29, 39],
+                iconImageOffset: [-14, -39]
+            });
+
+            myMap.geoObjects.add(placemark);
+
+            //placemark event hadler
+            /*placemark.events.add('click', function (e) {
+             e.preventDefault();
+             //some func
+             });*/
+        }
     })();
 });

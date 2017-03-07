@@ -1126,6 +1126,10 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
         @include box-sizing(border-box);
     }
 
+    &.active::before {
+        display: none;
+    }
+
 }
 .map {
     height: 442px;
