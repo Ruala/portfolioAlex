@@ -210,6 +210,8 @@ textarea {
     color: #4d4d4d;
     background-color: #f9f9f9;
     border-color: #9f9f9f; }
+  .form input:focus {
+    background-color: #fff000; }
 .form textarea {
   height: 100px; }
   .form textarea:focus {
@@ -272,12 +274,19 @@ textarea {
   text-decoration: none;
   text-align: center;
   background-color: transparent;
-  border: 2px solid #fb151a; }
+  border: 2px solid #fb151a;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .btn__red:hover {
+    color: #fff;
+    background-color: #fb151a; }
 
-.btn__red-solid {
-  color: #fff;
-  background-color: #fb151a; }
-
+/*.btn__red-solid {
+    color: #fff;
+    background-color: $main_red;
+}*/
 .btn__callback {
   display: inline-block;
   position: relative;
@@ -340,15 +349,21 @@ textarea {
   margin: 0 auto;
   font-size: 18px;
   background-color: transparent;
-  border: 2px solid #303030; }
-  .btn__more span {
-    border-bottom: 1px dashed #303030;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-  .btn__more:hover span {
-    border-bottom-color: transparent; }
+  border: 2px solid #c60509;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  /* span {
+      !* border-bottom: 1px dashed $textGrey;*!
+       @include transition(all 0.2s ease-in-out);
+   }*/ }
+  .btn__more:hover {
+    color: #fff;
+    background-color: #c60509;
+    /*  span {
+          border-bottom-color: transparent;
+      }*/ }
 
 .btn__close {
   width: 30px;
@@ -390,10 +405,17 @@ form .btn__submit {
   margin: 0 auto;
   font-size: 16px;
   font-weight: 500;
-  color: #f9f9f9;
-  background-color: #c60509;
-  border: none;
-  cursor: pointer; }
+  color: #303030;
+  background-color: transparent;
+  border-color: #c60509;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  form .btn__submit:hover {
+    color: #fff;
+    background-color: #c60509; }
 
 /* ---------------------------------------------- /*
  Transition elsements
@@ -789,7 +811,6 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
       color: white; }
 
 .development__box {
-  /*  height: 224px;*/
   padding: 6px;
   font-size: 14px;
   background-color: #fff;
@@ -803,8 +824,8 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
   .development__box:hover > div {
     border-color: #fb151a; }
   .development__box > div {
-    /*height: 212px;
-    overflow: hidden;*/
+    min-height: 235px;
+    overflow: hidden;
     padding: 30px 20px;
     border: 2px solid #f1f1f1;
     -webkit-transition: all 0.2s ease-in-out;
@@ -817,7 +838,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     line-height: 18px;
     opacity: 0.8;
     filter: alpha(opacity=80); }
-  .development__box a {
+  .development__box a, .development__box .title {
     display: inline-block;
     font-size: 21px;
     font-weight: 500;
@@ -825,12 +846,12 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     -moz-transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; }
-    .development__box a img {
+    .development__box a img, .development__box .title img {
       -webkit-transition: transform 0.5s;
       -moz-transition: transform 0.5s;
       -o-transition: transform 0.5s;
       transition: transform 0.5s; }
-    .development__box a:hover img {
+    .development__box a:hover img, .development__box .title:hover img {
       -ms-transform: rotateY(180deg);
       -moz-transform: rotateY(180deg);
       -webkit-transform: rotateY(180deg);

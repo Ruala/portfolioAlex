@@ -328,6 +328,7 @@ footer {
   }
   .btn__submit {
     margin-left: 4%;
+    color: #f9f9f9;
   }
   input, textarea {
     &:focus {
@@ -352,6 +353,10 @@ footer {
 .contact-us {
   margin-bottom: 10px;
   line-height: 30px;
+
+  a {
+    color: inherit;
+  }
 }
 .social {
 

@@ -257,6 +257,11 @@ textarea {
         background-color: #f9f9f9;
         border-color: #9f9f9f;
       }
+      &:focus {
+        background-color: #fff000;
+      }
+
+
     }
     textarea {
         height: 100px;
@@ -340,11 +345,17 @@ textarea {
     text-align: center;
     background-color: transparent;
     border: 2px solid $main_red;
+    @include transition(all 0.2s ease-in-out);
+
+    &:hover {
+        color: #fff;
+        background-color: $main_red;
+    }
 }
-.btn__red-solid {
+/*.btn__red-solid {
     color: #fff;
     background-color: $main_red;
-}
+}*/
 
 .btn__callback {
     display: inline-block;
@@ -410,17 +421,21 @@ textarea {
     margin: 0 auto;
     font-size: 18px;
     background-color: transparent;
-    border: 2px solid $textGrey;
+    border: 2px solid $btn_red;
+    @include transition(all 0.2s ease-in-out);
 
-    span {
-        border-bottom: 1px dashed $textGrey;
+   /* span {
+       !* border-bottom: 1px dashed $textGrey;*!
         @include transition(all 0.2s ease-in-out);
-    }
+    }*/
 
     &:hover {
-        span {
+        color: #fff;
+        background-color: $btn_red;
+
+      /*  span {
             border-bottom-color: transparent;
-        }
+        }*/
     }
 }
 .btn__close {
@@ -465,10 +480,16 @@ form .btn__submit {
     margin: 0 auto;
     font-size: 16px;
     font-weight: 500;
-    color: #f9f9f9;
-    background-color: $btn_red;
-    border: none;
+    color: $textGrey;
+    background-color: transparent;
+    border-color: $btn_red;
     cursor: pointer;
+    @include transition(all 0.2s ease-in-out);
+
+    &:hover {
+        color: #fff;
+        background-color: $btn_red;
+    }
 }
 
 /* ---------------------------------------------- /*
@@ -906,7 +927,6 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     }
 }
 .development__box {
-  /*  height: 224px;*/
     padding: 6px;
     font-size: 14px;
     background-color: #fff;
@@ -920,8 +940,8 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
     }
 
     > div {
-        /*height: 212px;
-        overflow: hidden;*/
+        min-height: 235px;
+        overflow: hidden;
         padding: 30px 20px;
         border: 2px solid #f1f1f1;
         @include transition(all 0.2s ease-in-out);
@@ -934,7 +954,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
         line-height: 18px;
         @include opacity(0.8);
     }
-    a {
+    a, .title {
         display: inline-block;
         font-size: 21px;
         font-weight: 500;
@@ -949,6 +969,7 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
             @include transform(rotateY(180deg));
         }
     }
+    .title {}
     .price {
         margin-top: 10px;
         font-size: 18px;
