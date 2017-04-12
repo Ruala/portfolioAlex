@@ -606,4 +606,25 @@ $(document).ready(function () {
             myMap.geoObjects.add(placemark);
         }
     })();
+
+    /*feedback form toggler*/
+    (function () {
+        var $switch = $('.switch');
+        var $btn = $switch.find('.btn__switch');
+        var $on = $switch.find('.switch__on');
+        var $off = $switch.find('.switch__off');
+        var options = {
+            animate: 'slide',
+            onOpen: function() {
+                $on.addClass('active');
+                $off.removeClass('active');
+            },
+            onClose: function() {
+                $off.addClass('active');
+                $on.removeClass('active');
+            }
+        };
+
+        $btn.blockToggler(options);
+    })();
 });

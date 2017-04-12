@@ -517,8 +517,7 @@ textarea {
         }
 
         &.active::before {
-            left: auto;
-            right: 2px;
+            left: 32px;
         }
     }
 }

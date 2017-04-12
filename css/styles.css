@@ -423,8 +423,7 @@ textarea {
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
     .feedback__form .btn__switch.active::before {
-      left: auto;
-      right: 2px; }
+      left: 32px; }
 
 .btn__red {
   display: block;
