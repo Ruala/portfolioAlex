@@ -333,6 +333,196 @@ textarea {
     }
 }
 
+.feedback__form {
+    margin: 30px 0;
+
+    label, .form__title {
+        float: left;
+        display: block;
+        width: 30%;
+        max-width: 171px;
+        font-size: 17px;
+        line-height: 36px;
+    }
+    input {
+        height: 36px;
+        margin-bottom: 20px;
+    }
+    textarea {
+        height: 143px;
+        margin-bottom: 25px;
+    }
+    input, textarea {
+        font-size: 18px;
+        border: 1px solid #a6a6a6;
+        @include box-shadow(inset 0 0 2px 1px rgba(1, 0, 0, 0.04));
+
+        &:focus {
+            color: #000;
+            background-color: #fff000;
+        }
+    }
+    .btn__submit {
+        width: 218px;
+        height: 50px;
+        font-size: 24px;
+        color: $main_red;
+        border-color: $main_red;
+
+        &:hover, &:focus {
+            color: #fff;
+            background-color: $main_red;
+        }
+    }
+
+    .form__title {
+        width: 15%;
+        line-height: 25px;
+    }
+    .description {
+        font-size: 14px;
+        line-height: 25px;
+
+        span {
+            color: #ff0000;
+        }
+    }
+
+    .form__box {
+        float: left;
+        width: 50%;
+        padding: 0 15px;
+        margin-bottom: 20px;
+
+        input {
+            float: left;
+            width: 70%;
+        }
+    }
+    .form__checkbox {
+        float: left;
+        width: 85%;
+
+        input[type="checkbox"] {
+            display: none;
+        }
+        label {
+            float: none;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            width: auto;
+            max-width: 100%;
+            padding-left: 40px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            line-height: 25px;
+            cursor: pointer;
+
+            &::before, &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: 2;
+                @include transition(all 0.2s ease);
+            }
+            &::before {
+                top: 0;
+                left: 0;
+                width: 25px;
+                height: 25px;
+                background-color: #fff;
+                border: 1px solid #a6a6a6;
+                @include border-radius(3px);
+                @include box-shadow(inset 0 0 2px 1px rgba(1, 0, 0, 0.04));
+            }
+            &::after {
+                top: 6px;
+                left: 5px;
+                width: 16px;
+                height: 12px;
+                background-image: url("../images/checked.png");
+                visibility: hidden;
+                @include opacity(0);
+            }
+        }
+        input[type="checkbox"]:checked + label {
+            &::before {
+                background-color: #ff2630;
+                border-color: #ff2630;
+            }
+            &::after {
+                visibility: visible;
+                @include opacity(1);
+            }
+        }
+    }
+    .bottom__block {
+        padding-top: 20px;
+
+        .form__title {
+            width: 15%;
+            line-height: 30px;
+        }
+    }
+    .switch__wrap {
+        float: left;
+        width: 85%;
+    }
+    .switch {
+        margin-bottom: 15px;
+        line-height: 30px;
+
+        span {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 2px;
+            font-size: 18px;
+            line-height: 26px;
+            border-bottom: 1px dashed rgba(48, 48, 48, 0.5);
+
+            &.active {
+                font-weight: 600;
+                border-bottom-color: transparent;
+            }
+            &.btn__switch {
+                margin-top: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+    .btn__switch {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        width: 60px;
+        height: 30px;
+        margin: 0 10px;
+        background-color: #ff2935;
+        @include border-radius(15px);
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 2px;
+            left: 2px;
+            width: 26px;
+            height: 26px;
+            background-color: #fff;
+            @include border-radius(50%);
+            @include transition(all 0.2s ease);
+        }
+
+        &.active::before {
+            left: auto;
+            right: 2px;
+        }
+    }
+}
+
 .btn__red {
     display: block;
     width: 187px;
@@ -481,12 +671,13 @@ form .btn__submit {
     font-size: 16px;
     font-weight: 500;
     color: $textGrey;
+    text-align: center;
     background-color: transparent;
     border-color: $btn_red;
     cursor: pointer;
     @include transition(all 0.2s ease-in-out);
 
-    &:hover {
+    &:hover, &:focus {
         color: #fff;
         background-color: $btn_red;
     }
@@ -1207,6 +1398,15 @@ html.mm-opening .hamburger--squeeze .hamburger-inner::before {
 .map {
     height: 442px;
     background-image: url("../images/map.jpg");
+}
+
+.feedback {
+    h2 {
+        font-size: 36px;
+    }
+    p {
+        text-align: center;
+    }
 }
 
 
