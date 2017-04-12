@@ -668,7 +668,7 @@ form .btn__submit {
     color: $textGrey;
     text-align: center;
     background-color: transparent;
-    border-color: $btn_red;
+    border: 2px solid $btn_red;
     cursor: pointer;
     @include transition(all 0.2s ease-in-out);
 

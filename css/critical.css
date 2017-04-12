@@ -564,7 +564,7 @@ form .btn__submit {
   color: #303030;
   text-align: center;
   background-color: transparent;
-  border-color: #c60509;
+  border: 2px solid #c60509;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
