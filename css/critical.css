@@ -444,10 +444,6 @@ textarea {
     color: #fff;
     background-color: #fb151a; }
 
-/*.btn__red-solid {
-    color: #fff;
-    background-color: $main_red;
-}*/
 .btn__callback {
   display: inline-block;
   position: relative;
