@@ -367,7 +367,7 @@ textarea {
         height: 50px;
         font-size: 24px;
         color: $main_red;
-        border-color: $main_red;
+        border: 2px solid $main_red;
 
         &:hover, &:focus {
             color: #fff;

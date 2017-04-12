@@ -294,7 +294,7 @@ textarea {
     height: 50px;
     font-size: 24px;
     color: #fb151a;
-    border-color: #fb151a; }
+    border: 2px solid #fb151a; }
     .feedback__form .btn__submit:hover, .feedback__form .btn__submit:focus {
       color: #fff;
       background-color: #fb151a; }
