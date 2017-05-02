@@ -1,0 +1,51 @@
+/* Medium devices */
+@media (max-width: 1199px) {  }
+
+/* Small devices */
+@media (max-width: 991px) {
+  .about {
+    padding-right: 0;
+  }
+  .footer__form {
+    padding-right: 0;
+  }
+  .contact-us {
+    font-size: 12px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 767px) {
+  .about, .news, .footer__form, .footer__contacts {
+    float: none;
+    width: 100%;
+  }
+  .about {
+    margin-bottom: 40px;
+  }
+  .footer__form {
+    margin-bottom: 40px;
+  }
+  .social {
+    p {
+      margin-bottom: 20px;
+    }
+    a + a {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .link__pdf {
+    margin-bottom: 20px;
+
+    + .link__pdf {
+      margin-left: 0;
+    }
+  }
+  .footer__form .form__box {
+    float: none;
+    width: 100%;
+  }
+}
