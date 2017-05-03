@@ -285,7 +285,7 @@
     function isElement(o) {
         return (
             typeof HTMLElement === "object" ? o instanceof HTMLElement : //DOM2
-            o && typeof o === "object" && o !== null && o.nodeType === 1 && typeof o.nodeName === "string"
+                o && typeof o === "object" && o !== null && o.nodeType === 1 && typeof o.nodeName === "string"
         );
     }
 })();
@@ -611,22 +611,51 @@ $(document).ready(function () {
     (function () {
         if (!$.fn.blockToggler) return;
 
-        var $switch = $('.switch');
-        var $btn = $switch.find('.btn__switch');
-        var $on = $switch.find('.switch__on');
-        var $off = $switch.find('.switch__off');
-        var options = {
-            animate: 'slide',
-            onOpen: function() {
-                $on.addClass('active');
-                $off.removeClass('active');
-            },
-            onClose: function() {
-                $off.addClass('active');
-                $on.removeClass('active');
-            }
-        };
+        /*switch*/
+        (function () {
+            var $switch = $('.switch');
+            var $btn = $switch.find('.btn__switch');
+            var $on = $switch.find('.switch__on');
+            var $off = $switch.find('.switch__off');
+            var options = {
+                animate: 'slide',
+                onOpen: function () {
+                    $on.addClass('active');
+                    $off.removeClass('active');
+                },
+                onClose: function () {
+                    $off.addClass('active');
+                    $on.removeClass('active');
+                }
+            };
 
-        $btn.blockToggler(options);
+            $btn.blockToggler(options);
+        })();
+
+        /*togglers inside switch*/
+        (function () {
+            var $togglers = $('.js__bt-switcher-btn');
+            var targetCelector = '.js__bt-switcher-target';
+            var options = {
+                animate: 'slide',
+                getTarget: function ($togglerBtn) {
+                  return $togglerBtn
+                      .parent()
+                      .children(targetCelector);
+                },
+                onOpen: function (controller) {
+                    var $togglerBtn = controller._$block;
+
+                    $togglerBtn.slideUp('normal', 'linear');
+                },
+                onClose: function (controller) {
+                    var $togglerBtn = controller._$block;
+
+                    $togglerBtn.slideDown('normal', 'linear');
+                }
+            };
+
+            $togglers.blockToggler(options);
+        })();
     })();
 });
