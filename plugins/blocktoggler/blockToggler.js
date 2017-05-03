@@ -17,7 +17,7 @@
         this._onAfterOpen = options.onAfterOpen || null;
         this._onAfterClose = options.onAfterClose || null;
         this._outerClickClose = options.outerClick || false;
-        this.class = {
+        this.className = {
             initializedToggler: 'js__bt-toggler-initialized',
             initializedTarget: 'js__bt-target-initialized',
             active: 'active'
@@ -27,6 +27,7 @@
     BlockToggler.prototype.init = function () {
         var throttledToggler = this.throttle(this.toggler, 405);
         var clickEvent = this._clickEvent = this.isIOS() ? 'touchstart' : 'click';
+        var $body = $('body');
         var $target;
 
         this._openBlockListener = this.openBlockListener.bind(this);
@@ -47,28 +48,28 @@
 
         if ($target) {
             $target
-                .addClass(this.class.initializedTarget)
+                .addClass(this.className.initializedTarget)
                 .find(this._closeBtnSelector)
                 .on('click', this._closeBtnListener);
 
             if (!this.isHidden($target)) {
                 this._isActive = true;
-                this._$block.addClass(this.class.active);
+                this._$block.addClass(this.className.active);
             }
         }
 
         if (this._outerClickClose) {
-            $('body').on(this._clickEvent, this._outerClickListener);
+            $body.on(this._clickEvent, this._outerClickListener);
         }
 
-        $('body').on({
+        $body.on({
             'blockOpening': this._openBlockListener,
             'closeGroup': this._closeGroupListener
         });
 
         this._$block
             .on(clickEvent, throttledToggler.bind(this))
-            .addClass(this.class.initializedToggler);
+            .addClass(this.className.initializedToggler);
     };
     BlockToggler.prototype.toggler = function (e) {
         var $el = $(e.target);
@@ -120,7 +121,7 @@
     };
     BlockToggler.prototype.closeBtnListener = function (e) {
         var $el = $(e.target);
-        var $currTarget = $el.closest('.' + this.class.initializedTarget);
+        var $currTarget = $el.closest('.' + this.className.initializedTarget);
 
         if (!$currTarget.is(this._$target)) {
             $el.off('click', this._closeBtnListener);
@@ -253,12 +254,9 @@
     BlockToggler.prototype.isHidden = function (el) {
         var $el = $(el);
 
-        var isHidden =
-            $el.is(':hidden') ||
+        return $el.is(':hidden') ||
             $el.css('visibility') === 'hidden' ||
             +$el.css('opacity') === 0;
-
-        return isHidden;
     };
 
     $.fn.blockToggler = function () {
