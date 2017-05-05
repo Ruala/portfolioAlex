@@ -42,7 +42,7 @@ if (isset($_POST) && count($_POST)) {
   <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/plugins/fancybox/jquery.fancybox.min.css">
 
   <!-- Custom styles CSS -->
-  <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/styles.css?v=42">
+  <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/styles.min.css?v=42">
 
   <?php wp_head(); ?>
 
