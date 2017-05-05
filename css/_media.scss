@@ -1,5 +1,5 @@
 /* Medium devices */
-@media (max-width: 1199px) {  }
+@media (max-width: 1199px) {}
 
 /* Small devices */
 @media (max-width: 991px) {
@@ -11,6 +11,18 @@
   }
   .contact-us {
     font-size: 12px;
+  }
+  .feedback__form {
+    .checkbox__wrap .form__title {
+      float: none;
+      width: 100%;
+      line-height: 36px;
+      margin-bottom: 10px;
+    }
+    .form__checkbox {
+      float: none;
+      width: 100%;
+    }
   }
 }
 
@@ -34,6 +46,14 @@
       margin-left: 20px;
     }
   }
+  .feedback__form {
+    .switch {
+      float: right;
+    }
+    .extended-box .form__box {
+      width: 50%;
+    }
+  }
 }
 
 @media (max-width: 599px) {
@@ -47,5 +67,18 @@
   .footer__form .form__box {
     float: none;
     width: 100%;
+  }
+  .feedback__form {
+    .form__box, .extended-box .form__box {
+      float: none;
+      width: 100%;
+    }
+    .bottom__block .form__title {
+      position: static;
+      margin-bottom: 15px;
+    }
+    .switch {
+      float: none;
+    }
   }
 }
