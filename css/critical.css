@@ -487,7 +487,8 @@ textarea {
       padding: 0 20px 0 15px;
       margin-bottom: 10px;
       font-size: 18px;
-      font-weight: 700; }
+      font-weight: 700;
+      cursor: pointer; }
       .feedback__form .extended-box .link__close::before {
         content: '';
         display: block;
