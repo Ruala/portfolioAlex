@@ -52,10 +52,10 @@
                 .find(this._closeBtnSelector)
                 .on('click', this._closeBtnListener);
 
-            if (!this.isHidden($target)) {
+            /*if (!this.isHidden($target)) {
                 this._isActive = true;
                 this._$block.addClass(this.className.active);
-            }
+            }*/
         }
 
         if (this._outerClickClose) {
@@ -70,6 +70,11 @@
         this._$block
             .on(clickEvent, throttledToggler.bind(this))
             .addClass(this.className.initializedToggler);
+
+        if (this._$block.hasClass(this.className.active)) {
+            this._isActive = true;
+            this.showBlock();
+        }
     };
     BlockToggler.prototype.toggler = function (e) {
         var $el = $(e.target);
